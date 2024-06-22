@@ -85,7 +85,7 @@ class DissertationModule:
         }
 
     def load_data(self):
-        with open('SLOG/data/cogs_LF/train.tsv', 'r') as tsvfile:
+        with open('train.tsv', 'r') as tsvfile:
             reader = csv.reader(tsvfile, delimiter='\t')
             sentence_id = 1
             for row in reader:
@@ -235,11 +235,10 @@ class DissertationModule:
                 else:
                     if v in self.sem2syns_active.keys():
                         deprel[k] = self.sem2syns_active[v]
-
  
             self.worddata['pos'] = pos
             self.worddata['head'] = heads
-            self.worddata['deprel'] = deprel
+            self.worddata['deprel'] = deprel.values()
 
 
             return self.worddata
