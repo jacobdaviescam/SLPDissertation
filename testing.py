@@ -2,7 +2,7 @@ import unittest
 import csv
 import pandas as pd
 
-from attempt import DissertationModule  # Replace "YourClass" with the actual class name from attempt.py
+from conversion import DissertationModule  # Replace "YourClass" with the actual class name from attempt.py
 
 class TestYourClass(unittest.TestCase):
 
