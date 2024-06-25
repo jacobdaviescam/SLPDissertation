@@ -30,7 +30,7 @@
     -> change heads to be a dictionary so we can index by key(word form)
     -> aux for the auxiliary verb
 
-[ ] -> 'by', 'to', 'that', 'who', 'what'
+[x] -> 'by', 'to', 'that', 'who', 'what'
     -> 123, 121, 
 
 

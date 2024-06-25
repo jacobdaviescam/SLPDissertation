@@ -1,0 +1,22 @@
+# To-Do List
+
+- [ ] Finish writing the conversion script
+    - [ ] Deal with passives
+    - [ ] Deal with 'that'
+    - [ ] Deal with 'to'
+    - [ ] Add code to convert each sentence in the dataset
+    - [ ] Add code to include the distribution and text of the sentence
+- [ ] Alter the parser code
+    - [ ] Add BERT embeddings
+    - [ ] Add a way to evaluate with respect to the distribution
+- [ ] Write introduction chapter
+- [ ] Write background chapter
+- [ ] Conduct experiments for data collection
+    - [ ] Run experiments on Cirrus
+- [ ] Analyze collected data
+    - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
+- [ ] Write methodology chapter
+- [ ] Revise literature review
+- [ ] Write results and discussion chapter
+- [ ] Proofread and edit entire dissertation
+- [ ] Submit final dissertation
