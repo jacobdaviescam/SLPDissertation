@@ -1,0 +1,25 @@
+utils:
+
+arc_hybrid.py - Transition-based parser
+
+bilstm.py - 
+
+chuliu_edmonds.py - 
+
+decoder.py - 
+
+elmo.py - 
+
+feature_extractor.py - 
+
+mstlstm.py - Graph-based parser
+
+multilayer_perceptron.py - 
+
+options_manager.py - 
+    - One of the problems dealt with here is lloading the train and tdev set from the file. We can change how it does this to include the subset datasets. 
+
+parser.py - 
+
+utils.py - 
+
