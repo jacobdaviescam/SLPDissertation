@@ -55,7 +55,7 @@ class DissertationModule:
             'melted':'melt', 'blessed':'bless'
         } 
         self.articles = ['a', 'the']
-        self.prepositions = ['on', 'in', 'beside', 'to', 'by']
+        self.prepositions = ['on', 'in', 'beside', 'by']
         self.output = {}
         self.worddata = None
 
@@ -116,7 +116,7 @@ class DissertationModule:
 
         # ---------------------- Setting up the dataframe ------------ #
 
-            heads = [0 for i in range(len(words))]
+            heads = [0 for i in range(len(words))] # this might need to be set to a dicionary as well to deal with multiple relations
             deprel = {k: ['root'] for k in range(len(words))}
             pos = [0 for i in range(len(words))]
 
@@ -133,14 +133,12 @@ class DissertationModule:
                 relation = relation[0]
                 relationship = re.search(finder, relation).group('relationname')
                 relationships.append(relationship)
-
     
             if 'theme' in relationships and 'agent' in relationships:
                 theme_index = relationships.index('theme')
                 agent_index = relationships.index('agent')
                 if theme_index < agent_index:
                     # 'theme' comes before 'agent' in the relation
-                    # Add your code here to handle this case
                     passive = True
                 else:
                     passive = False
@@ -149,8 +147,12 @@ class DissertationModule:
             else:
                 passive = False
 
-
-        
+        # ----------------------------- Dealing with 'to' ---------------------------- #
+            
+            if 'to' in self.worddata['form'].values and 'recipient' in relationships:
+                dative = True
+            else:
+                dative = False
         # -------------------- Check if the sentence is a question ------------------- #
             if '?' in sentence['sentence']:
                 question = True
@@ -176,12 +178,6 @@ class DissertationModule:
                     if index == number or row['form'] == name or row['form'] == question:
                         heads[index] = (re.search(finder, relation).group('head'))
                         deprel[index].append(re.search(finder, relation).group('relationname'))
-
-                    elif row['form'] in self.articles:
-                        heads[index] = index + 1
-                        deprel[index].append('det')
-                        if self.worddata.iloc[index-1]['form'] in self.prepositions:
-                            heads[index-1] = index + 1
                     
                     elif row['form'] in self.prepositions:
                         heads[index] = index + 1
@@ -199,10 +195,24 @@ class DissertationModule:
                         heads[index] = re.search(finder, relation).group('head')
                         deprel[index].append('mark')
 
-                    
+                    elif row['form'] == 'to':
+                        print(dative)
+                        if dative == True:
+                            heads[index] = index + 1
+                            deprel[index].append('case')
+                        else:
+                            heads[index] = index + 1
+                            deprel[index].append('mark')
+
                     elif row['form'] == 'did':
                         heads[index] = index + 1
                         deprel[index].append('aux')
+
+                    elif row['form'] in self.articles:
+                        heads[index] = index + 1
+                        deprel[index].append('det')
+                        if self.worddata.iloc[index-1]['form'] in self.prepositions or self.worddata.iloc[index-1]['form'] == 'to':
+                            heads[index-1] = index + 1
 
                     elif heads[index] == 0:
                         heads[index] = 0
@@ -252,7 +262,7 @@ class DissertationModule:
 # Example usage:
 module = DissertationModule()
 module.load_data()
-worddata = module.process_sentence(16940)
+worddata = module.process_sentence(16961)
 print(worddata)
 
 

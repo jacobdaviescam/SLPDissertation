@@ -13,7 +13,7 @@
     -> How to tell between 'to' infinitive and 'to' preposition. 
     -> If the verb is verb.recipient then it is a preposition.
     -> If the 'to' is for infinitives, the infinitive verb is 'ccomp' and  the 'to' is 'mark'. 
-    -> 121, 
+    -> 16980 for infinitive and 16969 for preposition, 16961 for an article
 
 [x] -> nmod - relation between the index at the first position and the index at the second position (maybe change the whole code to do this instead)
     -> 
