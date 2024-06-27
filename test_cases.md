@@ -49,3 +49,30 @@ Relations:
 
 Also need to include the sentence id and text at the start of the conllu format for each sentence. 
 
+
+## Unit Tests
+
+- `standalone_NP_PP`
+
+- `primitive`
+- `wh_Q_simple_trans`
+- `exposure_example_obj_proper`
+- `exposure_example_pp_dative`
+- `exposure_example_unacc`
+- `object_modifying_RC`
+- `exposure_example_obj_common`
+- `cp_4`
+- `exposure_example_transitive_subj`
+- `exposure_example_do_dative`
+- `exposure_example_passive`
+- `center_embed_4`
+- `pp_4`
+- `standalone_NP_RC`
+- `exposure_example_active`
+- `exposure_example_unacc_subj`
+- `in_distribution`
+- `exposure_example_subj_proper`
+- `center_embed_2`
+- `exposure_example_obj_omitted_transitive`
+- `exposure_example_subj_common`
+

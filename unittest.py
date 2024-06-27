@@ -27,10 +27,10 @@ class TestYourClass(unittest.TestCase):
 
         # Define the expected output for the test case
 
-        words = {'form': ['a', 'boy', 'painted', 'a', 'child', '.'], 'lemma': ['a', 'boy', 'paint', 'a', 'child', '.'], 'head':[1, 2, 0, 4, 2, 0], 'deprel': ['det', 'nsubj', 'root', 'det', 'obj', 'punct']}
+        conversion = {'form': ['a', 'boy', 'painted', 'a', 'child', '.'], 'lemma': ['a', 'boy', 'paint', 'a', 'child', '.'], 'head':[1, 2, 0, 4, 2, 2], 'deprel': ['det', 'nsubj', 'root', 'det', 'obj', 'punct']}
 
 
-        expected_output = pd.DataFrame(words)  # Replace "expected_output" with the actual expected output for the test case
+        expected_output = pd.DataFrame(conversion)  # Replace "expected_output" with the actual expected output for the test case
 
         # Create an instance of YourClass
         test_instance = DissertationModule()

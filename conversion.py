@@ -117,7 +117,7 @@ class DissertationModule:
         # ---------------------- Setting up the dataframe ------------ #
 
             heads = [0 for i in range(len(words))] # this might need to be set to a dicionary as well to deal with multiple relations
-            deprel = {k: ['root'] for k in range(len(words))}
+            deprel = {k: ['root'] for k in range(len(words))} # sets the default to 'root'
             pos = [0 for i in range(len(words))]
 
             single = re.compile(r'(\w+ \( x _ \d \))')
@@ -146,6 +146,10 @@ class DissertationModule:
                 passive = True
             else:
                 passive = False
+
+        # ------------------------- Dealing with passives v2 ------------------------- #
+            
+
 
         # ----------------------------- Dealing with 'to' ---------------------------- #
             
@@ -196,7 +200,6 @@ class DissertationModule:
                         deprel[index].append('mark')
 
                     elif row['form'] == 'to':
-                        print(dative)
                         if dative == True:
                             heads[index] = index + 1
                             deprel[index].append('case')
@@ -227,6 +230,8 @@ class DissertationModule:
                         pos[index] = 'PUNCT'
                     else:
                         pos[index] = 'NOUN'
+
+                    # need to add the pos for question words
 
             if question:
                 heads[0] = heads[-1]
@@ -262,7 +267,7 @@ class DissertationModule:
 # Example usage:
 module = DissertationModule()
 module.load_data()
-worddata = module.process_sentence(16961)
+worddata = module.process_sentence(1)
 print(worddata)
 
 

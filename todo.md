@@ -2,13 +2,21 @@
 
 - [ ] Finish writing the conversion script
     - [ ] Deal with passives
+        - [ ] Lemma of 'was' is 'be'
     - [ ] Deal with 'that'
     - [ ] Deal with 'to'
     - [ ] Add code to convert each sentence in the dataset
     - [ ] Add code to include the distribution and text of the sentence
+    - [ ] Punctuation
+        - [ ] Identify the main verb (the one that has no incoming edges)
+    - [ ] Unittests
+    - [ ] Sanity Checks
+        - [ ] Check that there is only one root
+        - [ ] Check that the length of forms, lemmas, pos, heads, deprel are the same
 - [ ] Alter the parser code
     - [ ] Add BERT embeddings
     - [ ] Add a way to evaluate with respect to the distribution
+        - [ ] Line 179 in conll17_ud_eval.py - do we need to change this?
 - [ ] Write introduction chapter
 - [ ] Write background chapter
 - [ ] Conduct experiments for data collection
