@@ -87,7 +87,7 @@ class TestConversion(unittest.TestCase):
 
         # sentence = The book was squeezed .
 
-        conversion = {'form': ['the', 'book', 'was', 'squeezed', '.'], 'lemma': ['the', 'book', 'be', 'squeeze', '.'], 'pos':['DET', 'NOUN', 'AUX', 'VERB', 'PUNCT'], 'head':[1, 3, 3, 0, 3], 'deprel': ['det', 'nsubj', 'aux:pass', 'root', 'punct']}
+        conversion = {'form': ['the', 'book', 'was', 'squeezed', '.'], 'lemma': ['the', 'book', 'be', 'squeeze', '.'], 'pos':['DET', 'NOUN', 'AUX', 'VERB', 'PUNCT'], 'head':[1, 3, 3, 0, 3], 'deprel': ['det', 'nsubj:pass', 'aux:pass', 'root', 'punct']}
 
 
         expected_output = pd.DataFrame(conversion)  

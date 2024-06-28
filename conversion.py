@@ -12,8 +12,8 @@ class DissertationModule:
         }
 
         self.sem2syns_passive = {
-            'theme': 'nsubj',
-            'agent': 'obl',
+            'theme': 'nsubj:pass',
+            'agent': 'obl:agent',
             'recipient': 'iobj',
             'location': 'obl'
         }
@@ -193,11 +193,15 @@ class DissertationModule:
 
                     if index == number or row['form'] == name or row['form'] == question:
                         heads[index] = int(re.search(finder, relation).group('head'))
-                        deprel[index].append(re.search(finder, relation).group('relationname'))
+                        if re.search(finder, relation).group('relationname') == 'nmod':
+                            preposition = re.search(finder, relation).group('preposition')
+                            deprel[index].append(f'nmod:{preposition}') 
+                        else:
+                            deprel[index].append(re.search(finder, relation).group('relationname'))
                     
                     elif row['form'] in self.prepositions:
                         heads[index] = index + 1
-                        deprel[index].append('adp')
+                        deprel[index].append('case')
 
                     elif row['form'] == '.':
                         heads[index] = int(re.search(finder, relations[0][0]).group('head'))
@@ -219,7 +223,7 @@ class DissertationModule:
                             heads[index] = index + 1
                             deprel[index].append('mark')
 
-                    elif row['form'] == 'did':
+                    elif row['form'] == 'did': # this does not work for all questions
                         heads[index] = index + 1
                         deprel[index].append('aux')
 
@@ -232,6 +236,8 @@ class DissertationModule:
                     elif heads[index] == 0:
                         heads[index] = 0
 
+            # --------------------------- Dealing the POS tags --------------------------- #
+
                     if row['form'] in self.pos:
                         pos[index] = self.pos[row['form']]
                     elif row['form'] in self.verbs or row['form'] in self.verbs_lemmas:
@@ -243,7 +249,6 @@ class DissertationModule:
                     else:
                         pos[index] = 'NOUN'
 
-                    # need to add the pos for question words
 
             if question:
                 heads[0] = heads[-1]
