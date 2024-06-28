@@ -52,11 +52,15 @@ class DissertationModule:
             'tossed':'toss', 'meant':'mean', 'longed':'long', 'yearned':'yearn', 'itched':'itch',
             'loaned':'loan', 'returned':'return', 'slipped':'slip', 'wired':'wire', 'crawled':'crawl',
             'shattered':'shatter', 'bought':'buy', 'squeezed':'squeeze', 'teleported':'teleport',
-            'melted':'melt', 'blessed':'bless'
+            'melted':'melt', 'blessed':'bless', 'was':'be', 'did':'do'
         } 
+
+        self.verbs = list(self.verbs_lemmas.values())
+
         self.articles = ['a', 'the']
         self.prepositions = ['on', 'in', 'beside', 'by']
         self.output = {}
+        self.gen = {}
         self.worddata = None
 
         self.pos = {
@@ -68,24 +72,27 @@ class DissertationModule:
             'beside': 'ADP',
             'that': 'SCONJ',
             'was': 'AUX',
-            'by': 'ADP'
+            'by': 'ADP', 
+            'did': 'AUX', 
+            'what': 'PRON',
+            'who': 'PRON'
         }
 
         self.proper_nouns = {
-            'emma', 'liam', 'olivia', 'noah', 'ava', 'william', 'isabella', 'james', 'sophia', 'oliver',
-            'charlotte', 'benjamin', 'mia', 'elijah', 'amelia', 'lucas', 'harper', 'mason', 'evelyn', 'logan',
-            'abigail', 'alexander', 'emily', 'ethan', 'elizabeth', 'jacob', 'mila', 'michael', 'ella', 'daniel',
-            'avery', 'henry', 'sofia', 'jackson', 'camila', 'sebastian', 'aria', 'aiden', 'scarlett', 'matthew',
-            'victoria', 'samuel', 'madison', 'david', 'luna', 'joseph', 'grace', 'carter', 'chloe', 'owen',
-            'penelope', 'wyatt', 'layla', 'john', 'riley', 'jack', 'zoey', 'luke', 'nora', 'jayden',
-            'lily', 'dylan', 'eleanor', 'grayson', 'hannah', 'levi', 'lillian', 'isaac', 'addison', 'gabriel',
-            'aubrey', 'julian', 'ellie', 'mateo', 'stella', 'anthony', 'natalie', 'jaxon', 'zoe', 'lincoln',
-            'leah', 'joshua', 'hazel', 'christopher', 'violet', 'andrew', 'aurora', 'theodore', 'savannah', 'caleb',
-            'audrey', 'ryan', 'brooklyn', 'asher', 'bella', 'nathan', 'claire', 'thomas', 'skylar', 'leo'
+            'Emma', 'Liam', 'Olivia', 'Noah', 'Ava', 'William', 'Isabella', 'James', 'Sophia', 'Oliver',
+            'Charlotte', 'Benjamin', 'Mia', 'Elijah', 'Amelia', 'Lucas', 'Harper', 'Mason', 'Evelyn', 'Logan',
+            'Abigail', 'Alexander', 'Emily', 'Ethan', 'Elizabeth', 'Jacob', 'Mila', 'Michael', 'Ella', 'Daniel',
+            'Avery', 'Henry', 'Sofia', 'Jackson', 'Camila', 'Sebastian', 'Aria', 'Aiden', 'Scarlett', 'Matthew',
+            'Victoria', 'Samuel', 'Madison', 'David', 'Luna', 'Joseph', 'Grace', 'Carter', 'Chloe', 'Owen',
+            'Penelope', 'Wyatt', 'Layla', 'John', 'Riley', 'Jack', 'Zoey', 'Luke', 'Nora', 'Jayden',
+            'Lily', 'Dylan', 'Eleanor', 'Grayson', 'Hannah', 'Levi', 'Lillian', 'Isaac', 'Addison', 'Gabriel',
+            'Aubrey', 'Julian', 'Ellie', 'Mateo', 'Stella', 'Anthony', 'Natalie', 'Jaxon', 'Zoe', 'Lincoln',
+            'Leah', 'Joshua', 'Hazel', 'Christopher', 'Violet', 'Andrew', 'Aurora', 'Theodore', 'Savannah', 'Caleb',
+            'Audrey', 'Ryan', 'Brooklyn', 'Asher', 'Bella', 'Nathan', 'Claire', 'Thomas', 'Skylar', 'Leo', 'Lina', 'Charlie'
         }
 
-    def load_data(self):
-        with open('train.tsv', 'r') as tsvfile:
+    def load_data(self, filename):
+        with open(filename, 'r') as tsvfile:
             reader = csv.reader(tsvfile, delimiter='\t')
             sentence_id = 1
             for row in reader:
@@ -102,14 +109,21 @@ class DissertationModule:
         # ---------------------- Add the words to the dataframe ---------------------- #
         if sentence:
             words = sentence['sentence'].split(' ')
-            words = [word.lower() for word in words]
-            self.worddata = pd.DataFrame(words, columns=['form'])
+            proper_words = []
+            for word in words:
+                if word not in self.proper_nouns:
+                    proper_words.append(word.lower())
+                else:
+                    proper_words.append(word)
+            self.worddata = pd.DataFrame(proper_words, columns=['form'])
 
         # ---------------------- Add the lemmas to the dataframe --------------------- #
             lemmas = []
             for index, row in self.worddata.iterrows():
                 if row['form'] in self.verbs_lemmas:
                     lemmas.append(self.verbs_lemmas[row['form']])
+                elif row['form'] in self.proper_nouns:
+                    lemmas.append(row['form'])
                 else:
                     lemmas.append(row['form'])
             self.worddata['lemma'] = lemmas
@@ -172,15 +186,13 @@ class DissertationModule:
                     number = int(number)
 
                 name = re.search(finder, relation).group('name')
-                if name is not None:
-                    name = name.lower()
 
                 question = re.search(finder, relation).group('question')
 
                 for index, row in self.worddata.iterrows():
 
                     if index == number or row['form'] == name or row['form'] == question:
-                        heads[index] = (re.search(finder, relation).group('head'))
+                        heads[index] = int(re.search(finder, relation).group('head'))
                         deprel[index].append(re.search(finder, relation).group('relationname'))
                     
                     elif row['form'] in self.prepositions:
@@ -188,7 +200,7 @@ class DissertationModule:
                         deprel[index].append('adp')
 
                     elif row['form'] == '.':
-                        heads[index] = re.search(finder, relations[0][0]).group('head')
+                        heads[index] = int(re.search(finder, relations[0][0]).group('head'))
                         deprel[index].append('punct')
 
                     elif row['form'] == 'was':
@@ -196,7 +208,7 @@ class DissertationModule:
                         deprel[index].append('aux:pass')
 
                     elif row['form'] == 'that':
-                        heads[index] = re.search(finder, relation).group('head')
+                        heads[index] = int(re.search(finder, relation).group('head'))
                         deprel[index].append('mark')
 
                     elif row['form'] == 'to':
@@ -222,11 +234,11 @@ class DissertationModule:
 
                     if row['form'] in self.pos:
                         pos[index] = self.pos[row['form']]
-                    elif row['form'] in self.verbs_lemmas:
+                    elif row['form'] in self.verbs or row['form'] in self.verbs_lemmas:
                         pos[index] = 'VERB'
                     elif row['form'] in self.proper_nouns:
                         pos[index] = 'PROPN'
-                    elif row['form'] == '.':
+                    elif row['form'] == '.' or row['form'] == '?':
                         pos[index] = 'PUNCT'
                     else:
                         pos[index] = 'NOUN'
@@ -252,11 +264,12 @@ class DissertationModule:
                 else:
                     if v in self.sem2syns_active.keys():
                         deprel[k] = self.sem2syns_active[v]
- 
+
+            # print(heads)
+
             self.worddata['pos'] = pos
             self.worddata['head'] = heads
             self.worddata['deprel'] = deprel.values()
-
 
             return self.worddata
         else:
@@ -265,10 +278,10 @@ class DissertationModule:
 
 
 # Example usage:
-module = DissertationModule()
-module.load_data()
-worddata = module.process_sentence(1)
-print(worddata)
+# module = DissertationModule()
+# module.load_data('train.tsv')
+# worddata = module.process_sentence(15876)
+# print(worddata)
 
 
 
