@@ -52,7 +52,7 @@ class DissertationModule:
             'tossed':'toss', 'meant':'mean', 'longed':'long', 'yearned':'yearn', 'itched':'itch',
             'loaned':'loan', 'returned':'return', 'slipped':'slip', 'wired':'wire', 'crawled':'crawl',
             'shattered':'shatter', 'bought':'buy', 'squeezed':'squeeze', 'teleported':'teleport',
-            'melted':'melt', 'blessed':'bless', 'was':'be', 'did':'do'
+            'melted':'melt', 'blessed':'bless'
         } 
 
         self.verbs = list(self.verbs_lemmas.values())
@@ -66,7 +66,6 @@ class DissertationModule:
         self.pos = {
             'a': 'DET',
             'the': 'DET',
-            'to': 'ADP',
             'on': 'ADP',
             'in': 'ADP',
             'beside': 'ADP',
@@ -91,6 +90,8 @@ class DissertationModule:
             'Audrey', 'Ryan', 'Brooklyn', 'Asher', 'Bella', 'Nathan', 'Claire', 'Thomas', 'Skylar', 'Leo', 'Lina', 'Charlie'
         }
 
+        self.length = 0
+
     def load_data(self, filename):
         with open(filename, 'r') as tsvfile:
             reader = csv.reader(tsvfile, delimiter='\t')
@@ -102,6 +103,7 @@ class DissertationModule:
                     distribution = row[2]
                     self.output[sentence_id] = {'sentence': sentence, 'semantics': semantics, 'distribution': distribution}
                     sentence_id += 1
+                    self.length += 1
 
     def process_sentence(self, sentence_id):
         sentence = self.output.get(sentence_id)
@@ -122,6 +124,10 @@ class DissertationModule:
             for index, row in self.worddata.iterrows():
                 if row['form'] in self.verbs_lemmas:
                     lemmas.append(self.verbs_lemmas[row['form']])
+                elif row['form'] == 'did':
+                    lemmas.append('do')
+                elif row['form'] == 'was':
+                    lemmas.append('be')
                 elif row['form'] in self.proper_nouns:
                     lemmas.append(row['form'])
                 else:
@@ -135,11 +141,10 @@ class DissertationModule:
             pos = [0 for i in range(len(words))]
 
             single = re.compile(r'(\w+ \( x _ \d \))')
-            double = re.compile(r'(\w+ \. \w+ (\. \w+ )?\( x _ \d , (?:x _ \d+|\w+|\?) \))') 
-            finder = re.compile(r'(?P<word>\w+) \. (?P<relationname>\w+)(?: \. )?(?P<preposition>\w+)? (?: )?(?P<relationship>\( x _ (?P<head>\d) , (x _ (?P<number>\d+)|(?P<name>\w+)|(?P<question>\?)) \))')
+            double = re.compile(r'(\w+ \. \w+ (\. \w+ )?\( x _ \d+ , (?:x _ \d+|\w+|\?) \))') 
+            finder = re.compile(r'(?P<word>\w+) \. (?P<relationname>\w+)(?: \. )?(?P<preposition>\w+)? (?: )?(?P<relationship>\( x _ (?P<head>\d+) , (x _ (?P<number>\d+)|(?P<name>\w+)|(?P<question>\?)) \))')
 
-            relations = re.findall(double, sentence['semantics'])
-            
+            relations = re.findall(double, sentence['semantics'])            
 
         # --------------------------- Dealing with passives -------------------------- #
             relationships = []
@@ -163,7 +168,7 @@ class DissertationModule:
 
         # ------------------------- Dealing with passives v2 ------------------------- #
             
-
+    
 
         # ----------------------------- Dealing with 'to' ---------------------------- #
             
@@ -173,10 +178,27 @@ class DissertationModule:
                 dative = False
         # -------------------- Check if the sentence is a question ------------------- #
             if '?' in sentence['sentence']:
-                question = True
+                _question = True
             else:
-                question = False
+                _question = False
 
+        # ------------------------- Identifying the main verb ------------------------ #
+
+            dependents = []
+            for relation in relations:
+                relation = relation[0]
+                number = re.search(finder, relation).group('number')
+                if number is not None:
+                    number = int(number)
+                    dependents.append(number)
+
+
+            for index, row in self.worddata.iterrows():
+                    if index not in dependents:
+                        if row['form'] in self.verbs_lemmas or row['form'] in self.verbs:
+
+                            main_verb = row['form']
+                
         # --------------------------- Heads and Deprels ---------------------------  #
             for i, relation in enumerate(relations):
                 relation = relation[0]
@@ -190,10 +212,16 @@ class DissertationModule:
                 question = re.search(finder, relation).group('question')
 
                 for index, row in self.worddata.iterrows():
+                    # if index not in dependents:
+                    #     if row['form'] in self.verbs_lemmas or row['form'] in self.verbs:
+
+                    #         main_verb = row['form']
 
                     if index == number or row['form'] == name or row['form'] == question:
                         heads[index] = int(re.search(finder, relation).group('head'))
                         if re.search(finder, relation).group('relationname') == 'nmod':
+                            if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
+                                deprel[index].append('acl:relcl')
                             preposition = re.search(finder, relation).group('preposition')
                             deprel[index].append(f'nmod:{preposition}') 
                         else:
@@ -204,7 +232,8 @@ class DissertationModule:
                         deprel[index].append('case')
 
                     elif row['form'] == '.':
-                        heads[index] = int(re.search(finder, relations[0][0]).group('head'))
+                        main_verb_index = self.worddata[self.worddata['form'] == main_verb].index[0]
+                        heads[index] = main_verb_index
                         deprel[index].append('punct')
 
                     elif row['form'] == 'was':
@@ -223,8 +252,9 @@ class DissertationModule:
                             heads[index] = index + 1
                             deprel[index].append('mark')
 
-                    elif row['form'] == 'did': # this does not work for all questions
-                        heads[index] = index + 1
+                    elif row['form'] == 'did': 
+                        main_verb_index = self.worddata[self.worddata['form'] == main_verb].index[0]
+                        heads[index] = main_verb_index
                         deprel[index].append('aux')
 
                     elif row['form'] in self.articles:
@@ -237,8 +267,12 @@ class DissertationModule:
                         heads[index] = 0
 
             # --------------------------- Dealing the POS tags --------------------------- #
-
-                    if row['form'] in self.pos:
+                    if row['form'] == 'to':
+                        if dative == False:
+                            pos[index] = 'PART'
+                        else:
+                            pos[index] = 'ADP'
+                    elif row['form'] in self.pos:
                         pos[index] = self.pos[row['form']]
                     elif row['form'] in self.verbs or row['form'] in self.verbs_lemmas:
                         pos[index] = 'VERB'
@@ -250,7 +284,7 @@ class DissertationModule:
                         pos[index] = 'NOUN'
 
 
-            if question:
+            if _question:
                 heads[0] = heads[-1]
                 deprel[0] = deprel[list(deprel)[-1]]
                 deprel[list(deprel)[-1]] = ['punct']
@@ -271,6 +305,7 @@ class DissertationModule:
                         deprel[k] = self.sem2syns_active[v]
 
             # print(heads)
+            
 
             self.worddata['pos'] = pos
             self.worddata['head'] = heads
@@ -284,9 +319,25 @@ class DissertationModule:
 
 # Example usage:
 # module = DissertationModule()
-# module.load_data('train.tsv')
-# worddata = module.process_sentence(15876)
+# module.load_data('gen_cogsLF.tsv')
+# worddata = module.process_sentence(16001)
 # print(worddata)
+
+# ---------------------------------------------------------------------------- #
+#                                  Main runner                                 #
+# ---------------------------------------------------------------------------- #
+
+# module = DissertationModule()
+# module.load_data('train.tsv')
+
+# for i in range(module.length):
+#     worddata = module.process_sentence(i)
+#     if worddata is not None:
+#         print(worddata)
+#         print('\n')
+#     else:
+#         print('No data found for sentence', i)
+#         print('\n')
 
 
 

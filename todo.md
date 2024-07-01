@@ -2,14 +2,16 @@
 
 - [ ] Finish writing the conversion script
     - [ ] Deal with passives
-        - [ ] Lemma of 'was' is 'be'
+        - [x] Lemma of 'was' is 'be'
+    - [ ] Deal with unaccusatives (these are linked with passives and the way that we deal with them)
     - [ ] Deal with 'that'
     - [ ] Deal with 'to'
-    - [ ] Add code to convert each sentence in the dataset
+    - [ ] Deal with center embeddings
+    - [x] Add code to convert each sentence in the dataset
     - [ ] Add code to include the distribution and text of the sentence
-    - [ ] Punctuation
-        - [ ] Identify the main verb (the one that has no incoming edges)
-    - [ ] Unittests
+    - [x] Punctuation
+        - [x] Identify the main verb (the one that has no incoming edges)
+    - [x] Unittests
     - [ ] Sanity Checks
         - [ ] Check that there is only one root
         - [ ] Check that the length of forms, lemmas, pos, heads, deprel are the same
