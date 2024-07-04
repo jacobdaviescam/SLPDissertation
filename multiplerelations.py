@@ -66,7 +66,6 @@ class DissertationModule:
         self.pos = {
             'a': 'DET',
             'the': 'DET',
-            'to': 'ADP',
             'on': 'ADP',
             'in': 'ADP',
             'beside': 'ADP',
@@ -137,16 +136,15 @@ class DissertationModule:
 
         # ---------------------- Setting up the dataframe ------------ #
 
-            heads = {k: [0] for k in range(len(words))} # this might need to be set to a dicionary as well to deal with multiple relations
+            heads = {k: [(0, 'root')] for k in range(len(words))} # this might need to be set to a dicionary as well to deal with multiple relations
             deprel = {k: ['root'] for k in range(len(words))} # sets the default to 'root'
             pos = [0 for i in range(len(words))]
 
             single = re.compile(r'(\w+ \( x _ \d \))')
-            double = re.compile(r'(\w+ \. \w+ (\. \w+ )?\( x _ \d , (?:x _ \d+|\w+|\?) \))') 
-            finder = re.compile(r'(?P<word>\w+) \. (?P<relationname>\w+)(?: \. )?(?P<preposition>\w+)? (?: )?(?P<relationship>\( x _ (?P<head>\d) , (x _ (?P<number>\d+)|(?P<name>\w+)|(?P<question>\?)) \))')
+            double = re.compile(r'(\w+ \. \w+ (\. \w+ )?\( x _ \d+ , (?:x _ \d+|\w+|\?) \))') 
+            finder = re.compile(r'(?P<word>\w+) \. (?P<relationname>\w+)(?: \. )?(?P<preposition>\w+)? (?: )?(?P<relationship>\( x _ (?P<head>\d+) , (x _ (?P<number>\d+)|(?P<name>\w+)|(?P<question>\?)) \))')
 
-            relations = re.findall(double, sentence['semantics'])
-            
+            relations = re.findall(double, sentence['semantics'])            
 
         # --------------------------- Dealing with passives -------------------------- #
             relationships = []
@@ -167,6 +165,10 @@ class DissertationModule:
                 passive = True
             else:
                 passive = False
+
+        # ------------------------- Dealing with passives v2 ------------------------- #
+            
+    
 
         # ----------------------------- Dealing with 'to' ---------------------------- #
             
@@ -189,9 +191,14 @@ class DissertationModule:
                 if number is not None:
                     number = int(number)
                     dependents.append(number)
-                
-            
 
+
+            for index, row in self.worddata.iterrows():
+                    if index not in dependents:
+                        if row['form'] in self.verbs_lemmas or row['form'] in self.verbs:
+
+                            main_verb = row['form']
+                
         # --------------------------- Heads and Deprels ---------------------------  #
             for i, relation in enumerate(relations):
                 relation = relation[0]
@@ -205,63 +212,75 @@ class DissertationModule:
                 question = re.search(finder, relation).group('question')
 
                 for index, row in self.worddata.iterrows():
-                    if index not in dependents:
-                        if row['form'] in self.verbs_lemmas or row['form'] in self.verbs:
+                    # if index not in dependents:
+                    #     if row['form'] in self.verbs_lemmas or row['form'] in self.verbs:
 
-                            main_verb = row['form']
+                    #         main_verb = row['form']
 
                     if index == number or row['form'] == name or row['form'] == question:
-                        heads[index].append(int(re.search(finder, relation).group('head')))
-                        #Add the passive identification back here
+                            heads[index].append((int(re.search(finder, relation).group('head')), re.search(finder, relation).group('relationname')))
 
-                        if re.search(finder, relation).group('relationname') == 'nmod':
-                            if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
-                                deprel[index].append('acl:relcl')
-                            preposition = re.search(finder, relation).group('preposition')
-                            deprel[index].append(f'nmod:{preposition}') 
-                        else:
-                            deprel[index].append(re.search(finder, relation).group('relationname'))
+                    # ----------------------- Dealing with relative clauses ---------------------- #
+                            if re.search(finder, relation).group('relationname') == 'nmod':
+                                if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
+                                    that_index = int(re.search(finder, relation).group('head')) + 1
+                    # ---------------------------- Dealing with 'that' --------------------------- #
+                                    if self.worddata.iloc[that_index]['form'] == 'that':
+                                        heads[that_index].append((number, 'that'))
+                                    deprel[index].append('acl:relcl')
+                    # -------------------- Dealing with deps for prepositions -------------------- #
+                                preposition = re.search(finder, relation).group('preposition')
+                                deprel[index].append(f'nmod:{preposition}') 
+                    # ----------------- Dealing with 'that' in subordinate clause ---------------- #
+                            elif re.search(finder, relation).group('relationname') == 'ccomp':
+                                that_index = int(re.search(finder, relation).group('head')) + 1
+                                heads[that_index].append((number, 'that'))
+                                deprel[index].append('ccomp')
+                            else:
+                                deprel[index].append(re.search(finder, relation).group('relationname'))
                     
                     elif row['form'] in self.prepositions:
-                        heads[index].append(index + 1)
+                        heads[index].append(((index + 1), 'preposition'))
                         deprel[index].append('case')
 
                     elif row['form'] == '.':
                         main_verb_index = self.worddata[self.worddata['form'] == main_verb].index[0]
-                        heads[index].append(main_verb_index)
+                        heads[index].append(((main_verb_index), 'punct'))
                         deprel[index].append('punct')
 
                     elif row['form'] == 'was':
-                        heads[index].append(index + 1)
+                        heads[index].append(((index + 1), 'aux:pass'))
                         deprel[index].append('aux:pass')
 
                     elif row['form'] == 'that':
-                        heads[index].append(int(re.search(finder, relation).group('head')))
                         deprel[index].append('mark')
 
                     elif row['form'] == 'to':
                         if dative == True:
-                            heads[index].append(index + 1)
+                            heads[index].append(((index + 1), 'case'))
                             deprel[index].append('case')
                         else:
-                            heads[index].append(index + 1)
+                            heads[index].append(((index + 1), 'mark'))
                             deprel[index].append('mark')
 
-                    elif row['form'] == 'did': # this does not work for all questions
+                    elif row['form'] == 'did': 
                         main_verb_index = self.worddata[self.worddata['form'] == main_verb].index[0]
-                        heads[index].append(main_verb_index)
+                        heads[index].append(((main_verb_index), 'aux'))
                         deprel[index].append('aux')
 
                     elif row['form'] in self.articles:
-                        heads[index].append(index + 1)
+                        heads[index].append(((index + 1), 'det'))
                         deprel[index].append('det')
                         if self.worddata.iloc[index-1]['form'] in self.prepositions or self.worddata.iloc[index-1]['form'] == 'to':
-                            heads[index-1].append(index + 1)
-
+                            heads[index-1].append(((index + 1), 'case'))
 
             # --------------------------- Dealing the POS tags --------------------------- #
-
-                    if row['form'] in self.pos:
+                    if row['form'] == 'to':
+                        if dative == False:
+                            pos[index] = 'PART'
+                        else:
+                            pos[index] = 'ADP'
+                    elif row['form'] in self.pos:
                         pos[index] = self.pos[row['form']]
                     elif row['form'] in self.verbs or row['form'] in self.verbs_lemmas:
                         pos[index] = 'VERB'
@@ -273,8 +292,8 @@ class DissertationModule:
                         pos[index] = 'NOUN'
 
 
-            if question:
-                heads[0] = heads[-1]
+            if _question:
+                heads[0] = heads[list(heads)[-1]]
                 deprel[0] = deprel[list(deprel)[-1]]
                 deprel[list(deprel)[-1]] = ['punct']
 
@@ -293,16 +312,29 @@ class DissertationModule:
                     if v in self.sem2syns_active.keys():
                         deprel[k] = self.sem2syns_active[v]
 
-            first_heads = []
+            deps = {k:set(v) for k, v in heads.items()}
+            # for k, v in deps:
+            #     if len(v) > 1:
+            #         v = v - (0, 'root')
+
+            # print(heads)
+            new_heads = []
             for k, v in heads.items():
                 if len(v) < 2:
-                    first_heads.append(v[0])
+                    new_heads.append(v[0])
                 else:
-                    first_heads.append(v[1])
-                
+                    deprelations = [headdep[1] for headdep in v]
+                    if 'agent' in deprelations:
+                        new_heads.append(v[deprelations.index('agent')])
+                    elif 'theme' in deprelations:
+                        new_heads.append(v[deprelations.index('theme')])
+                    else:
+                        new_heads.append(v[1])
+
+            new_heads = [v[0] for v in new_heads]
 
             self.worddata['pos'] = pos
-            self.worddata['head'] = first_heads
+            self.worddata['head'] = new_heads
             self.worddata['deprel'] = deprel.values()
 
             return self.worddata
@@ -314,7 +346,7 @@ class DissertationModule:
 # Example usage:
 module = DissertationModule()
 module.load_data('train.tsv')
-worddata = module.process_sentence(10795)
+worddata = module.process_sentence(15881)
 print(worddata)
 
 # ---------------------------------------------------------------------------- #

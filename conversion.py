@@ -218,21 +218,26 @@ class DissertationModule:
                     #         main_verb = row['form']
 
                     if index == number or row['form'] == name or row['form'] == question:
-                        heads[index] = int(re.search(finder, relation).group('head'))
-                        if re.search(finder, relation).group('relationname') == 'nmod':
-                            if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
+                            heads[index] = int(re.search(finder, relation).group('head'))
+
+                    # ----------------------- Dealing with relative clauses ---------------------- #
+                            if re.search(finder, relation).group('relationname') == 'nmod':
+                                if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
+                                    that_index = int(re.search(finder, relation).group('head')) + 1
+                    # ---------------------------- Dealing with 'that' --------------------------- #
+                                    if self.worddata.iloc[that_index]['form'] == 'that':
+                                        heads[that_index] = number
+                                    deprel[index].append('acl:relcl')
+                    # -------------------- Dealing with deps for prepositions -------------------- #
+                                preposition = re.search(finder, relation).group('preposition')
+                                deprel[index].append(f'nmod:{preposition}') 
+                    # ----------------- Dealing with 'that' in subordinate clause ---------------- #
+                            elif re.search(finder, relation).group('relationname') == 'ccomp':
                                 that_index = int(re.search(finder, relation).group('head')) + 1
-                                if self.worddata.iloc[that_index]['form'] == 'that':
-                                    heads[that_index] = number
-                                deprel[index].append('acl:relcl')
-                            preposition = re.search(finder, relation).group('preposition')
-                            deprel[index].append(f'nmod:{preposition}') 
-                        elif re.search(finder, relation).group('relationname') == 'ccomp':
-                            that_index = int(re.search(finder, relation).group('head')) + 1
-                            heads[that_index] = number
-                            deprel[index].append('ccomp')
-                        else:
-                            deprel[index].append(re.search(finder, relation).group('relationname'))
+                                heads[that_index] = number
+                                deprel[index].append('ccomp')
+                            else:
+                                deprel[index].append(re.search(finder, relation).group('relationname'))
                     
                     elif row['form'] in self.prepositions:
                         heads[index] = index + 1
@@ -326,7 +331,7 @@ class DissertationModule:
 # Example usage:
 module = DissertationModule()
 module.load_data('train.tsv')
-worddata = module.process_sentence(16220)
+worddata = module.process_sentence(15876)
 print(worddata)
 
 # ---------------------------------------------------------------------------- #
