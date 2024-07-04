@@ -221,9 +221,16 @@ class DissertationModule:
                         heads[index] = int(re.search(finder, relation).group('head'))
                         if re.search(finder, relation).group('relationname') == 'nmod':
                             if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
+                                that_index = int(re.search(finder, relation).group('head')) + 1
+                                if self.worddata.iloc[that_index]['form'] == 'that':
+                                    heads[that_index] = number
                                 deprel[index].append('acl:relcl')
                             preposition = re.search(finder, relation).group('preposition')
                             deprel[index].append(f'nmod:{preposition}') 
+                        elif re.search(finder, relation).group('relationname') == 'ccomp':
+                            that_index = int(re.search(finder, relation).group('head')) + 1
+                            heads[that_index] = number
+                            deprel[index].append('ccomp')
                         else:
                             deprel[index].append(re.search(finder, relation).group('relationname'))
                     
@@ -241,7 +248,6 @@ class DissertationModule:
                         deprel[index].append('aux:pass')
 
                     elif row['form'] == 'that':
-                        heads[index] = int(re.search(finder, relation).group('head'))
                         deprel[index].append('mark')
 
                     elif row['form'] == 'to':
@@ -318,10 +324,10 @@ class DissertationModule:
 
 
 # Example usage:
-# module = DissertationModule()
-# module.load_data('gen_cogsLF.tsv')
-# worddata = module.process_sentence(16001)
-# print(worddata)
+module = DissertationModule()
+module.load_data('train.tsv')
+worddata = module.process_sentence(16220)
+print(worddata)
 
 # ---------------------------------------------------------------------------- #
 #                                  Main runner                                 #

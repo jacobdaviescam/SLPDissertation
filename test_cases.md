@@ -1,10 +1,24 @@
 ## Current Errors
 
 1. multiple_relations
+    **solution** = list a set of control verbs and make a condition when there are two agents to select the control verb. 
+
+    **relative clauses** = find the relative clause verb and remove this from the heads list
+
 
 2. to
 
-3. that (center embedding)
+    1. Do a sanity check through both datasets to see if there are any instances of multiple ditransitives where to is the last word. 
+
+        If there is we need to incorporate a similar method to 'that'
+        
+        If not we can attribute the head of 'to' to the recipient in the sentence. 
+
+        There is one instance where there are two ditransitives in the sentence. 
+
+3. that (center embedding) DONE
+
+**solution** use linear previous word to identify the subject of the relative verb and from their identify the relative verb which that must attach to. 
 
 4. deprel_to
 
@@ -39,6 +53,8 @@
     **Issue**= The head of ? and 'who' is attributed to the last verb 'dust' when it should be attributed to both the main verb 'hate' and the secondary verb 'dust'
 
     **issue_type** = multiple_relations
+
+    **solution** = list a set of control verbs and make a condition when there are two agents to select the control verb. 
 
     [left]:  [3, 0, 3, 1, 3]
 
@@ -119,7 +135,7 @@ code_line = 247 +
 
     [left]:  [1, 2, 0, 4, 11, 11, 7, 11, 11, 10, 7, 4, 2]
 
-    [right]: [1, 2, 0, 4, 2, 11, 7, 11, 10, 10, 11, 7, 4]
+    [right]: [1, 2, 0, 4, 2, 11, 7, 11, 10, 10, 7, 4, 2]
 
     **semantics** =  * cat ( x _ 4 ) ; * girl ( x _ 7 ) ; boy ( x _ 1 ) AND help . agent ( x _ 2 , x _ 1 ) AND help . theme ( x _ 2 , x _ 4 ) AND cat . nmod ( x _ 4 , x _ 11 ) AND girl . nmod ( x _ 7 , x _ 10 ) AND change . agent ( x _ 10 , Emma ) AND change . theme ( x _ 10 , x _ 7 ) AND roll . agent ( x _ 11 , x _ 7 ) AND roll . theme ( x _ 11 , x _ 4 )
 

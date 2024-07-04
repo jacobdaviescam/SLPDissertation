@@ -176,9 +176,9 @@ class DissertationModule:
                 dative = False
         # -------------------- Check if the sentence is a question ------------------- #
             if '?' in sentence['sentence']:
-                question = True
+                _question = True
             else:
-                question = False
+                _question = False
 
         # ------------------------- Identifying the main verb ------------------------ #
 
@@ -212,6 +212,8 @@ class DissertationModule:
 
                     if index == number or row['form'] == name or row['form'] == question:
                         heads[index].append(int(re.search(finder, relation).group('head')))
+                        #Add the passive identification back here
+
                         if re.search(finder, relation).group('relationname') == 'nmod':
                             if self.worddata.iloc[number]['form'] in self.verbs_lemmas:
                                 deprel[index].append('acl:relcl')
