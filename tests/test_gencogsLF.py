@@ -4,11 +4,11 @@ import csv
 import pandas as pd
 from pandas.util.testing import assert_frame_equal
 sys.path.append('/Users/jacobdavies/SLPDissertation')
-from conversion import DissertationModule
+from passives import DissertationModule
 
 class TestConversion(unittest.TestCase):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         unittest.TestCase.__init__(self, *args, **kwargs)
         self.test_instance = DissertationModule()
         self.test_instance.load_data('gen_cogsLF.tsv') 
@@ -36,7 +36,7 @@ class TestConversion(unittest.TestCase):
 
         # sentence = A cake was passed to a passenger beside a tree by the boy .
 
-        conversion = {'form': ['a', 'cake', 'was', 'passed', 'to', 'a', 'passenger', 'beside', 'a', 'tree', 'by', 'the', 'boy', '.'], 'lemma': ['a', 'cake', 'be', 'pass', 'to', 'a', 'passenger', 'beside', 'a', 'tree', 'by', 'the', 'boy', '.'], 'pos':['DET', 'NOUN', 'AUX', 'VERB', 'ADP', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 3, 3, 0, 6, 6, 3, 9, 9, 6, 12, 12, 3, 3], 'deprel': ['det', 'nsubj:pass', 'aux:pass', 'root', 'case', 'det', 'iobj', 'case', 'det', 'nmod:beside', 'case', 'det', 'obl:agent', 'punct']}
+        conversion = {'form': ['a', 'cake', 'was', 'passed', 'to', 'a', 'passenger', 'beside', 'a', 'tree', 'by', 'the', 'boy', '.'], 'lemma': ['a', 'cake', 'be', 'pass', 'to', 'a', 'passenger', 'beside', 'a', 'tree', 'by', 'the', 'boy', '.'], 'pos':['DET', 'NOUN', 'AUX', 'VERB', 'ADP', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 3, 3, 0, 6, 6, 3, 9, 9, 6, 12, 12, 3, 3], 'deprel': ['det', 'nsubj:pass', 'aux:pass', 'root', 'case', 'det', 'obl:to', 'case', 'det', 'nmod:beside', 'case', 'det', 'obl:agent', 'punct']}
 
 
         expected_output = pd.DataFrame(conversion)  
@@ -53,7 +53,7 @@ class TestConversion(unittest.TestCase):
 
         # sentence = A cake that Liam found was investigated by the cat .
 
-        conversion = {'form': ['a', 'cake', 'that', 'Liam', 'found', 'was', 'investigated', 'by', 'the', 'cat', '.'], 'lemma': ['a', 'cake', 'that', 'Liam', 'find', 'be', 'investigate', 'by', 'the', 'cat', '.'], 'pos':['DET', 'NOUN', 'SCONJ', 'PROPN', 'VERB', 'AUX', 'VERB', 'ADP', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 6, 4, 4, 1, 6, 0, 9, 9, 6, 6], 'deprel': ['det', 'nsubj', 'mark', 'nsubj', 'acl:relcl', 'aux:pass', 'root', 'case', 'det', 'obl:agent', 'punct']}
+        conversion = {'form': ['a', 'cake', 'that', 'Liam', 'found', 'was', 'investigated', 'by', 'the', 'cat', '.'], 'lemma': ['a', 'cake', 'that', 'Liam', 'find', 'be', 'investigate', 'by', 'the', 'cat', '.'], 'pos':['DET', 'NOUN', 'SCONJ', 'PROPN', 'VERB', 'AUX', 'VERB', 'ADP', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 6, 4, 4, 1, 6, 0, 9, 9, 6, 6], 'deprel': ['det', 'nsubj:pass', 'mark', 'nsubj', 'acl:relcl', 'aux:pass', 'root', 'case', 'det', 'obl:agent', 'punct']}
 
 
         expected_output = pd.DataFrame(conversion)  
@@ -155,7 +155,7 @@ class TestConversion(unittest.TestCase):
 
         # sentence = Who did Emma give the cake to ?
 
-        conversion = {'form': ['who', 'did', 'Emma', 'give', 'the', 'cake', 'to', '?'], 'lemma': ['who', 'do', 'Emma', 'give', 'the', 'cake', 'to', '?'], 'pos':['PRON', 'AUX', 'PROPN', 'VERB', 'DET', 'NOUN', 'ADP', 'PUNCT'], 'head':[3, 3, 3, 0, 5, 3, 0, 3], 'deprel': ['iobj', 'aux', 'nsubj', 'root', 'det', 'obj', 'case', 'punct']}
+        conversion = {'form': ['who', 'did', 'Emma', 'give', 'the', 'cake', 'to', '?'], 'lemma': ['who', 'do', 'Emma', 'give', 'the', 'cake', 'to', '?'], 'pos':['PRON', 'AUX', 'PROPN', 'VERB', 'DET', 'NOUN', 'ADP', 'PUNCT'], 'head':[3, 3, 3, 0, 5, 3, 0, 3], 'deprel': ['obl:to', 'aux', 'nsubj', 'root', 'det', 'obj', 'case', 'punct']}
 
 
         expected_output = pd.DataFrame(conversion)  

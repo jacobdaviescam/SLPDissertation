@@ -1,26 +1,29 @@
 # To-Do List
 
 - [ ] Finish writing the conversion script
-    - [ ] Deal with passives
+    - [x] Questions with dangling 'to'
+    - [x] Deal with passives
         - [x] Lemma of 'was' is 'be'
-    - [ ] Deal with unaccusatives (these are linked with passives and the way that we deal with them)
-    - [ ] Deal with 'that'
-    - [ ] Deal with 'to'
-    - [ ] Deal with center embeddings
+    - [x] Deal with unaccusatives (these are linked with passives and the way that we deal with them)
+        - [x] Dictionary mapping first
+    - [x] Deal with 'that'
+    - [x] Deal with 'to'
+    - [x] Deal with center embeddings
     - [x] Add code to convert each sentence in the dataset
-    - [ ] Add code to include the distribution and text of the sentence
+    - [x] Add code to include the distribution and text of the sentence
     - [x] Punctuation
         - [x] Identify the main verb (the one that has no incoming edges)
     - [x] Unittests
     - [ ] Sanity Checks
         - [ ] Check that there is only one root
-        - [ ] Check that the length of forms, lemmas, pos, heads, deprel are the same
+        - [x] Check that the length of forms, lemmas, pos, heads, deprel are the same
 - [ ] Alter the parser code
     - [ ] Add BERT embeddings
-    - [ ] Add a way to evaluate with respect to the distribution
-        - [ ] Line 179 in conll17_ud_eval.py - do we need to change this?
+    - [x] Add a way to evaluate with respect to the distribution
+        - [x] Line 179 in conll17_ud_eval.py - do we need to change this?
 - [ ] Write introduction chapter
 - [ ] Write background chapter
+    - [ ] How much do we want to tailor to PPLS. 
 - [ ] Conduct experiments for data collection
     - [ ] Run experiments on Cirrus
 - [ ] Analyze collected data

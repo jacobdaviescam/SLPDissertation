@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 from pandas.util.testing import assert_frame_equal
 sys.path.append('/Users/jacobdavies/SLPDissertation')
-from conversion import DissertationModule
+from passives import DissertationModule
 
 class TestConversion(unittest.TestCase):
 
@@ -204,7 +204,7 @@ class TestConversion(unittest.TestCase):
 
         # sentence = A baby respected that the host confessed that Emma admired that a girl liked that a bunny was offered a block on the tabletop .
 
-        conversion = {'form': ['a', 'baby', 'respected', 'that', 'the', 'host', 'confessed', 'that', 'Emma', 'admired', 'that', 'a', 'girl', 'liked', 'that', 'a', 'bunny', 'was', 'offered', 'a', 'block', 'on', 'the', 'tabletop', '.'], 'lemma': ['a', 'baby', 'respect', 'that', 'the', 'host', 'confess', 'that', 'Emma', 'admire', 'that', 'a', 'girl', 'like', 'that', 'a', 'bunny', 'be', 'offer', 'a', 'block', 'on', 'the', 'tabletop', '.'], 'pos':['DET', 'NOUN', 'VERB', 'SCONJ', 'DET', 'NOUN', 'VERB', 'SCONJ', 'PROPN', 'VERB', 'SCONJ', 'DET', 'NOUN', 'VERB', 'SCONJ', 'DET', 'NOUN', 'AUX', 'VERB', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 2, 0, 6, 5, 6, 2, 9, 9, 6, 13, 12, 13, 9, 18, 16, 18, 18, 13, 20, 18, 23, 23, 20, 2], 'deprel': ['det', 'nsubj', 'root', 'mark', 'det', 'nsubj', 'ccomp', 'mark', 'nsubj', 'ccomp', 'mark', 'det', 'nsubj', 'ccomp', 'mark', 'det', 'iobj', 'aux:pass', 'ccomp', 'det', 'obj', 'case', 'det', 'nmod:on', 'punct']}
+        conversion = {'form': ['a', 'baby', 'respected', 'that', 'the', 'host', 'confessed', 'that', 'Emma', 'admired', 'that', 'a', 'girl', 'liked', 'that', 'a', 'bunny', 'was', 'offered', 'a', 'block', 'on', 'the', 'tabletop', '.'], 'lemma': ['a', 'baby', 'respect', 'that', 'the', 'host', 'confess', 'that', 'Emma', 'admire', 'that', 'a', 'girl', 'like', 'that', 'a', 'bunny', 'be', 'offer', 'a', 'block', 'on', 'the', 'tabletop', '.'], 'pos':['DET', 'NOUN', 'VERB', 'SCONJ', 'DET', 'NOUN', 'VERB', 'SCONJ', 'PROPN', 'VERB', 'SCONJ', 'DET', 'NOUN', 'VERB', 'SCONJ', 'DET', 'NOUN', 'AUX', 'VERB', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 2, 0, 6, 5, 6, 2, 9, 9, 6, 13, 12, 13, 9, 18, 16, 18, 18, 13, 20, 18, 23, 23, 20, 2], 'deprel': ['det', 'nsubj', 'root', 'mark', 'det', 'nsubj', 'ccomp', 'mark', 'nsubj', 'ccomp', 'mark', 'det', 'nsubj', 'ccomp', 'mark', 'det', 'nsubj:pass', 'aux:pass', 'ccomp', 'det', 'obj', 'case', 'det', 'nmod:on', 'punct']}
 
 
         expected_output = pd.DataFrame(conversion)  
@@ -354,7 +354,7 @@ class TestConversion(unittest.TestCase):
 
         # sentence = Lina gave the cake beside a stage to Olivia .
 
-        conversion = {'form': ['Lina', 'gave', 'the', 'cake', 'beside', 'a', 'stage', 'to', 'Olivia', '.'], 'lemma': ['Lina', 'give', 'the', 'cake', 'beside', 'a', 'stage', 'to', 'Olivia', '.'], 'pos':['PROPN', 'VERB', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'ADP', 'PROPN', 'PUNCT'], 'head':[1, 0, 3, 1, 6, 6, 3, 8, 1, 1], 'deprel': ['nsubj', 'root', 'det', 'obj', 'case', 'det', 'nmod:beside', 'case', 'iobj', 'punct']}
+        conversion = {'form': ['Lina', 'gave', 'the', 'cake', 'beside', 'a', 'stage', 'to', 'Olivia', '.'], 'lemma': ['Lina', 'give', 'the', 'cake', 'beside', 'a', 'stage', 'to', 'Olivia', '.'], 'pos':['PROPN', 'VERB', 'DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'ADP', 'PROPN', 'PUNCT'], 'head':[1, 0, 3, 1, 6, 6, 3, 8, 1, 1], 'deprel': ['nsubj', 'root', 'det', 'obj', 'case', 'det', 'nmod:beside', 'case', 'obl:to', 'punct']}
 
 
         expected_output = pd.DataFrame(conversion)  

@@ -1,0 +1,15 @@
+{0: [(0, 'root'), (1, 'agent')], 
+1: [(0, 'root')], 
+2: [(0, 'root'), (4, 'that')], 
+3: [(0, 'root'), (4, 'agent')], 
+4: [(0, 'root'), (1, 'ccomp')], 
+5: [(0, 'root'), (6, 'det'), (6, 'det'), (6, 'det'), (6, 'det'), (6, 'det'), (6, 'det'), (6, 'det')], 
+6: [(0, 'root'), (4, 'theme'), (9, 'theme')], 
+7: [(0, 'root'), (9, 'that')], 
+8: [(0, 'root'), (9, 'aux:pass'), (9, 'aux:pass'), (9, 'aux:pass'), (9, 'aux:pass'), (9, 'aux:pass'), (9, 'aux:pass'), (9, 'aux:pass')], 
+9: [(0, 'root'), (6, 'nmod')], 
+10: [(0, 'root'), (11, 'preposition'), (11, 'preposition'), (11, 'preposition'), (11, 'preposition'), (11, 'preposition'), (11, 'preposition'), (11, 'preposition')], 
+11: [(0, 'root'), (9, 'agent')], 
+12: [(0, 'root'), (1, 'punct'), (1, 'punct'), (1, 'punct'), (1, 'punct'), (1, 'punct'), (1, 'punct'), (1, 'punct')]}
+
+[(1, 'agent'), (0, 'root'), (4, 'that'), (4, 'agent'), (1, 'ccomp'), (6, 'det'), (9, 'that'), (9, 'aux:pass'), (6, 'nmod'), (11, 'preposition'), (9, 'agent'), (1, 'punct')]
