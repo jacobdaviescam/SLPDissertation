@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 from pandas.util.testing import assert_frame_equal
 sys.path.append('/Users/jacobdavies/SLPDissertation')
-from passives import DissertationModule
+from conversion import DissertationModule
 
 class TestConversion(unittest.TestCase):
 
@@ -364,6 +364,24 @@ class TestConversion(unittest.TestCase):
         actual_output = self.test_instance.process_sentence(input_data) 
 
         assert_frame_equal(actual_output, expected_output)
+
+    def test_RC_modifying_subj(self):
+        
+        input_data = 24523  
+
+        # sentence = A deer respected a boy that passed the farmer the cake .
+
+        conversion = {'form': ['a', 'deer', 'respected', 'a', 'boy', 'that', 'passed', 'the', 'farmer', 'the', 'cake', '.'], 'lemma': ['a', 'deer', 'respect', 'a', 'boy', 'that', 'pass', 'the', 'farmer', 'the', 'cake', '.'], 'pos':['DET', 'NOUN', 'VERB', 'DET', 'NOUN', 'SCONJ', 'VERB', 'DET', 'NOUN', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 2, 0, 4, 2, 6, 4, 8, 6, 10, 6, 2], 'deprel': ['det', 'nsubj', 'root', 'det', 'obj', 'mark', 'acl:relcl', 'det', 'iobj', 'det', 'obj', 'punct']}
+
+
+        expected_output = pd.DataFrame(conversion)  
+
+        
+
+        actual_output = self.test_instance.process_sentence(input_data) 
+
+        assert_frame_equal(actual_output, expected_output)
+
 
 # Run the tests
 if __name__ == '__main__':

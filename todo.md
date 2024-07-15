@@ -15,10 +15,16 @@
         - [x] Identify the main verb (the one that has no incoming edges)
     - [x] Unittests
     - [ ] Sanity Checks
-        - [ ] Check that there is only one root
+        - [x] Check that there is only one root
         - [x] Check that the length of forms, lemmas, pos, heads, deprel are the same
 - [ ] Alter the parser code
     - [ ] Add BERT embeddings
+        - [ ] Create ELMo file based on our dataset
+            - [ ] Downloading BERT
+            - [ ] Running BERT on our dataset
+            - [ ] Getting a vector for each word 
+                - [ ] Decision from Kulmiziev
+            - [ ] Saving the vectors to a hdf5 file
     - [x] Add a way to evaluate with respect to the distribution
         - [x] Line 179 in conll17_ud_eval.py - do we need to change this?
 - [ ] Write introduction chapter
@@ -29,7 +35,10 @@
 - [ ] Analyze collected data
     - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
 - [ ] Write methodology chapter
+    - [ ] How did I create the dataset
 - [ ] Revise literature review
 - [ ] Write results and discussion chapter
+    - [ ] What analysis techniques do I want to do?
+- [ ] Write conclusion chapter
 - [ ] Proofread and edit entire dissertation
 - [ ] Submit final dissertation

@@ -212,7 +212,7 @@ class DissertationModule:
                     number = int(number)
                     dependents.append(number)
 
-
+            main_verb = None
             for index, row in self.worddata.iterrows():
                     if index not in dependents:
                         if row['form'] in self.verbs_lemmas or row['form'] in self.verbs:
@@ -354,55 +354,54 @@ class DissertationModule:
                         pos[index] = 'NOUN'
 
 
+            
+
+            
+            # print(heads) 
+            # print(deprel)
             if _question:
                 heads[0] = heads[list(heads)[-1]]
                 deprel[0] = deprel[list(deprel)[-1]]
-                deprel[list(deprel)[-1]] = ['punct']
 
-            # print(deprel)
-            # print(heads)
-
-            for k, v in deprel.items():
-                if len(v) == 1:
-                    deprel[k] = v[0]
-                elif 'nsubj' in v:
-                    deprel[k] = 'nsubj'
-                elif 'iobj' in v and 'nsubj:pass' in v:
-                    deprel[k] = 'iobj'
-                elif 'obj' in v and 'nsubj:pass' in v:
-                    deprel[k] = 'obj'
-                elif 'nsubj:pass' in v:
-                    deprel[k] = 'nsubj:pass'
-                elif 'obj' in v:
-                    deprel[k] = 'obj'
-                else:
-                    deprel[k] = v[1]
-
-            for k, v in deprel.items():
-                if v == 'iobj'and dative == True:
-                    deprel[k] = 'obl:to'
 
             new_heads = []
-            # print(len(heads))
 
             # -------------------- This deals with multiple relations -------------------- #
             
             for k, v in heads.items():
+                if main_verb is not None:
+                    main_verb_index = self.worddata[self.worddata['form'] == main_verb].index[0]
+                else:
+                    main_verb_index = None
                 if len(v) < 2:
                     new_heads.append(v[0])
                 else:
                     deprelations = [headdep[1] for headdep in v]
-                    # print(deprelations)
-                    # print(v)
-                    if 'agent' in deprelations:
-                        new_heads.append(v[deprelations.index('agent')])
-                        # if _question == False:
-                        #     deprel[k] = 'agent'
+                    deprelations_index = [headdep[0] for headdep in v]
+                    if main_verb_index in deprelations_index:
+                        new_heads.append(v[deprelations_index.index(main_verb_index)])
+                        deprel[k] = deprel[k][deprelations_index.index(main_verb_index)]
+                    elif 'agent' in deprelations:
+                        if 'theme' in deprelations:
+                            if 'center_embed' in sentence['distribution']:
+                                new_heads.append(v[deprelations.index('agent')])
+                            else:
+
+
+                                if deprelations.index('agent') < deprelations.index('theme'):
+
+                                    new_heads.append(v[deprelations.index('agent')])
+                                    deprel[k] = deprel[k][deprelations.index('agent')]
+                                else:
+                                    new_heads.append(v[deprelations.index('theme')])
+                                    deprel[k] = deprel[k][deprelations.index('theme')]
+                        else:
+                            new_heads.append(v[deprelations.index('agent')])
                     elif deprelations.count('theme') > 1:
-                        main_verb_index = self.worddata[self.worddata['form'] == main_verb].index[0]
                         for item in v:
                             if item[0] == main_verb_index:
                                 new_heads.append(item)
+                                break
                             else:
                                 new_heads.append(v[deprelations.index('theme')])
                                 break
@@ -419,8 +418,41 @@ class DissertationModule:
                     else:
                         new_heads.append(v[1])
 
+            # print(new_heads)
+
+
+            if _question:
+                deprel[list(deprel)[-1]] = ['punct']
+
+            # print(deprel)
+
+            for k, v in deprel.items():
+                if isinstance(v, list):
+
+                    if len(v) == 1:
+                        deprel[k] = v[0]
+                    elif 'nsubj' in v:
+                        deprel[k] = 'nsubj'
+                    elif 'iobj' in v and 'nsubj:pass' in v:
+                        deprel[k] = 'iobj'
+                    elif 'obj' in v and 'nsubj:pass' in v:
+                        deprel[k] = 'obj'
+                    elif 'nsubj:pass' in v:
+                        deprel[k] = 'nsubj:pass'
+                    elif 'obj' in v:
+                        deprel[k] = 'obj'
+                    else:
+                        deprel[k] = v[1]
+                
+
+
+            for k, v in deprel.items():
+                if v == 'iobj'and dative == True:
+                    deprel[k] = 'obl:to'
+
             # print(heads)
             # print(new_heads)
+            # print(deprel)
 
 
             new_heads = [v[0] for v in new_heads]
@@ -429,25 +461,22 @@ class DissertationModule:
                 new_heads[1] = 0
                 deprel[1] = 'root'
 
-
             xpos = ['_' for i in range(len(words))]
             feats = ['_' for i in range(len(words))]
             deps = ['_' for i in range(len(words))]
             misc = ['_' for i in range(len(words))]
-            self.worddata.index += 1 
+            self.worddata.index += 1
 
-            # print(new_heads)
-            # print(deprel)
+
 
             self.worddata['pos'] = pos
             self.worddata['xpos'] = xpos
             self.worddata['feats'] = feats
             self.worddata['head'] = [head + 1 if head != 0 else 0 for head in new_heads]
+            # self.worddata['head'] = new_heads
             self.worddata['deprel'] = deprel.values()
             self.worddata['deps'] = deps
             self.worddata['misc'] = misc
-
-
 
             return self.worddata
         else:
@@ -458,7 +487,7 @@ class DissertationModule:
 # Example usage:
 # module = DissertationModule()
 # module.load_data('train.tsv')
-# worddata = module.process_sentence(10798)
+# worddata = module.process_sentence(11479)
 # print(worddata)
 
 # ---------------------------------------------------------------------------- #
@@ -466,11 +495,11 @@ class DissertationModule:
 # ---------------------------------------------------------------------------- #
 
 module = DissertationModule()
-module.load_data('gen_cogsLF.tsv')
+module.load_data('train.tsv')
 sent_id = 1
 for i in range(1, module.length):
     worddata = module.process_sentence(i)
-    with open('gen_cogsLF.conllu', 'a') as f:
+    with open('train.conllu', 'a') as f:
         f.write(f'# sent_id = {sent_id}\n')
         f.write(f"# text = {module.output[i]['sentence']}\n")
         f.write(f"# distribution = {module.output[i]['distribution']}\n")
