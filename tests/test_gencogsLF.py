@@ -198,5 +198,20 @@ class TestConversion(unittest.TestCase):
 
         assert_frame_equal(actual_output, expected_output)
 
+    # def test_RC_modif_iobj_2(self):
+        
+    #     input_data = 9895  
+
+    #     # sentence = The radio was given to the boy that a human enlarged .
+
+    #     conversion = {'form': ['the', 'radio', 'was', 'given', 'to', 'the', 'boy', 'that', 'a', 'human', 'enlarged', '.'], 'lemma': ['the', 'radio', 'was', 'give', 'to', 'the', 'boy', 'that', 'a', 'human', 'enlarge', '.'], 'pos':['DET', 'NOUN', 'AUX', 'VERB', 'ADP', 'DET', 'NOUN', 'SCONJ', 'DET', 'NOUN', 'VERB', 'PUNCT'], 'head':[1, 3, 3, 0, 6, 6, 3, 10, 7], 'deprel': ['obj', 'aux', 'det', 'nsubj', 'root', 'mark', 'nsubj', 'ccomp', 'punct']}
+
+
+    #     expected_output = pd.DataFrame(conversion)  
+
+    #     actual_output = self.test_instance.process_sentence(input_data) 
+
+    #     assert_frame_equal(actual_output, expected_output)
+
 if __name__ == '__main__':
     unittest.main()

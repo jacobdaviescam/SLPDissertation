@@ -381,6 +381,9 @@ class DissertationModule:
                     if main_verb_index in deprelations_index:
                         new_heads.append(v[deprelations_index.index(main_verb_index)])
                         deprel[k] = deprel[k][deprelations_index.index(main_verb_index)]
+
+                    elif deprelations.count('agent') > 1:
+                        new_heads.append(v[max(idx for idx, val in enumerate(deprelations) if val == 'agent')])
                     elif 'agent' in deprelations:
                         if 'theme' in deprelations:
                             if 'center_embed' in sentence['distribution']:
@@ -395,6 +398,14 @@ class DissertationModule:
                                 else:
                                     new_heads.append(v[deprelations.index('theme')])
                                     deprel[k] = deprel[k][deprelations.index('theme')]
+                        elif 'recipient' in deprelations:
+                            if deprelations.index('recipient') < deprelations.index('agent'):
+
+                                new_heads.append(v[deprelations.index('recipient')])
+                                deprel[k] = deprel[k][deprelations.index('recipient')]
+                            else:
+                                new_heads.append(v[deprelations.index('agent')])
+                                deprel[k] = deprel[k][deprelations.index('agent')]
                         else:
                             new_heads.append(v[deprelations.index('agent')])
                     elif deprelations.count('theme') > 1:
@@ -407,7 +418,17 @@ class DissertationModule:
                                 break
                 
                     elif deprelations.count('theme') == 1:
-                        new_heads.append(v[deprelations.index('theme')])
+                        if 'recipient' in deprelations:
+                            if deprelations.index('recipient') < deprelations.index('theme'):
+
+                                new_heads.append(v[deprelations.index('recipient')])
+                                deprel[k] = deprel[k][deprelations.index('recipient')]
+                            else:
+                                new_heads.append(v[deprelations.index('theme')])
+                                deprel[k] = deprel[k][deprelations.index('theme')]
+                        
+                        else:
+                            new_heads.append(v[deprelations.index('theme')])
 
                     # elif deprelations.count('theme') == 2:
                     #     new_heads.append(v[max(idx for idx, val in enumerate(deprelations) if val == 'theme')])
@@ -469,14 +490,27 @@ class DissertationModule:
 
 
 
+
+
             self.worddata['pos'] = pos
             self.worddata['xpos'] = xpos
             self.worddata['feats'] = feats
-            self.worddata['head'] = [head + 1 if head != 0 else 0 for head in new_heads]
-            # self.worddata['head'] = new_heads
+            # self.worddata['head'] = [head + 1 if head != 0 else 0 for head in new_heads]
+            self.worddata['head'] = new_heads
             self.worddata['deprel'] = deprel.values()
             self.worddata['deps'] = deps
             self.worddata['misc'] = misc
+
+            final_heads = []
+            for index, row in self.worddata.iterrows():
+                if row['head'] == 0 and row['form'] == 'to':
+                    final_heads.append(1)
+                elif row['head'] == 0:
+                    final_heads.append(0)
+                else:
+                    final_heads.append(row['head']+1)
+
+            self.worddata['head'] = final_heads
 
             return self.worddata
         else:
@@ -486,30 +520,30 @@ class DissertationModule:
 
 # Example usage:
 # module = DissertationModule()
-# module.load_data('train.tsv')
-# worddata = module.process_sentence(11479)
+# module.load_data('gen_cogsLF.tsv')
+# worddata = module.process_sentence(14001)
 # print(worddata)
 
 # ---------------------------------------------------------------------------- #
 #                                  Main runner                                 #
 # ---------------------------------------------------------------------------- #
 
-module = DissertationModule()
-module.load_data('train.tsv')
-sent_id = 1
-for i in range(1, module.length):
-    worddata = module.process_sentence(i)
-    with open('train.conllu', 'a') as f:
-        f.write(f'# sent_id = {sent_id}\n')
-        f.write(f"# text = {module.output[i]['sentence']}\n")
-        f.write(f"# distribution = {module.output[i]['distribution']}\n")
-        if worddata is not None:
-            worddata.to_csv(f, sep='\t', index=True, header = False)
-            f.write('\n')
-        else:
-            print('No data found for sentence', i)
-            print('\n')
-        sent_id += 1
+# module = DissertationModule()
+# module.load_data('gen_cogsLF.tsv')
+# sent_id = 1
+# for i in range(1, module.length):
+#     worddata = module.process_sentence(i)
+#     with open('UD_SLOG/slog-ud-generalisation.conllu', 'a') as f:
+#         f.write(f'# sent_id = {sent_id}\n')
+#         f.write(f"# text = {module.output[i]['sentence']}\n")
+#         f.write(f"# distribution = {module.output[i]['distribution']}\n")
+#         if worddata is not None:
+#             worddata.to_csv(f, sep='\t', index=True, header = False)
+#             f.write('\n')
+#         else:
+#             print('No data found for sentence', i)
+#             print('\n')
+#         sent_id += 1
 
 
 

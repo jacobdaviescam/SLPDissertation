@@ -1,6 +1,6 @@
 # To-Do List
 
-- [ ] Finish writing the conversion script
+- [x] Finish writing the conversion script
     - [x] Questions with dangling 'to'
     - [x] Deal with passives
         - [x] Lemma of 'was' is 'be'
@@ -14,7 +14,7 @@
     - [x] Punctuation
         - [x] Identify the main verb (the one that has no incoming edges)
     - [x] Unittests
-    - [ ] Sanity Checks
+    - [x] Sanity Checks
         - [x] Check that there is only one root
         - [x] Check that the length of forms, lemmas, pos, heads, deprel are the same
 - [ ] Alter the parser code
@@ -29,9 +29,11 @@
         - [x] Line 179 in conll17_ud_eval.py - do we need to change this?
 - [ ] Write introduction chapter
 - [ ] Write background chapter
-    - [ ] How much do we want to tailor to PPLS. 
 - [ ] Conduct experiments for data collection
     - [ ] Run experiments on Cirrus
+        - [ ] Start by running a parse of a subset of the dataset
+        - [ ] Write a slurm script
+        - [ ] Run the parser on the entire dataset
 - [ ] Analyze collected data
     - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
 - [ ] Write methodology chapter

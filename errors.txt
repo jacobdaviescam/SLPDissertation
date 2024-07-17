@@ -1,4 +1,10 @@
 27581 - needed to change the head of 'drew' - object_modifying_RC 
 24001 - needed to change the head of 'duke' - object_modifying_RC (nsubj rather than obj)
 
+15596
+
 These errors do not seem to be consistent across the distribution type. 
+
+gen_cogs - 8121s
+
+note to self - that some of the RC_modif_subj are wrong if they include a certain construction inside
