@@ -382,8 +382,6 @@ class DissertationModule:
                         new_heads.append(v[deprelations_index.index(main_verb_index)])
                         deprel[k] = deprel[k][deprelations_index.index(main_verb_index)]
 
-                    elif deprelations.count('agent') > 1:
-                        new_heads.append(v[max(idx for idx, val in enumerate(deprelations) if val == 'agent')])
                     elif 'agent' in deprelations:
                         if 'theme' in deprelations:
                             if 'center_embed' in sentence['distribution']:
@@ -408,6 +406,16 @@ class DissertationModule:
                                 deprel[k] = deprel[k][deprelations.index('agent')]
                         else:
                             new_heads.append(v[deprelations.index('agent')])
+
+                    elif deprelations.count('agent') > 1:
+                        agents = []
+                        for idx, val in enumerate(deprelations):
+                            if val == 'agent':
+                                agents.append(v[idx])
+                        for agent in agents:
+                            if deprel[agent[0]][1] == 'ccomp':
+                                new_heads.append(agent)
+                                break
                     elif deprelations.count('theme') > 1:
                         for item in v:
                             if item[0] == main_verb_index:
@@ -521,7 +529,7 @@ class DissertationModule:
 # Example usage:
 # module = DissertationModule()
 # module.load_data('gen_cogsLF.tsv')
-# worddata = module.process_sentence(14001)
+# worddata = module.process_sentence(9735)
 # print(worddata)
 
 # ---------------------------------------------------------------------------- #
@@ -529,11 +537,11 @@ class DissertationModule:
 # ---------------------------------------------------------------------------- #
 
 # module = DissertationModule()
-# module.load_data('gen_cogsLF.tsv')
+# module.load_data('test.tsv')
 # sent_id = 1
 # for i in range(1, module.length):
 #     worddata = module.process_sentence(i)
-#     with open('UD_SLOG/slog-ud-generalisation.conllu', 'a') as f:
+#     with open('UD_SLOG/slog-ud-test.conllu', 'a') as f:
 #         f.write(f'# sent_id = {sent_id}\n')
 #         f.write(f"# text = {module.output[i]['sentence']}\n")
 #         f.write(f"# distribution = {module.output[i]['distribution']}\n")

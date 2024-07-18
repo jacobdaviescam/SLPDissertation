@@ -198,6 +198,21 @@ class TestConversion(unittest.TestCase):
 
         assert_frame_equal(actual_output, expected_output)
 
+    def test_Q_subj_active_control(self):
+
+        input_data = 11241  
+
+        # sentence = Who declared that Sophia wanted to clean ?
+
+        conversion = {'form': ['who', 'declared', 'that', 'Sophia', 'wanted', 'to', 'clean', '?'], 'lemma': ['who', 'declare', 'that', 'Sophia', 'want', 'to', 'clean', '?'], 'pos':['PRON', 'VERB', 'SCONJ', 'PROPN', 'VERB', 'PART', 'VERB', 'PUNCT'], 'head':[1, 0, 4, 4, 1, 6, 4, 1], 'deprel': ['nsubj', 'root', 'mark', 'nsubj', 'ccomp', 'mark', 'xcomp', 'punct']}
+
+
+        expected_output = pd.DataFrame(conversion)  
+
+        actual_output = self.test_instance.process_sentence(input_data) 
+
+        assert_frame_equal(actual_output, expected_output)
+
     # def test_RC_modif_iobj_2(self):
         
     #     input_data = 9895  
