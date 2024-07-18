@@ -1,0 +1,46 @@
+# To-Do List
+
+- [x] Finish writing the conversion script
+    - [x] Questions with dangling 'to'
+    - [x] Deal with passives
+        - [x] Lemma of 'was' is 'be'
+    - [x] Deal with unaccusatives (these are linked with passives and the way that we deal with them)
+        - [x] Dictionary mapping first
+    - [x] Deal with 'that'
+    - [x] Deal with 'to'
+    - [x] Deal with center embeddings
+    - [x] Add code to convert each sentence in the dataset
+    - [x] Add code to include the distribution and text of the sentence
+    - [x] Punctuation
+        - [x] Identify the main verb (the one that has no incoming edges)
+    - [x] Unittests
+    - [x] Sanity Checks
+        - [x] Check that there is only one root
+        - [x] Check that the length of forms, lemmas, pos, heads, deprel are the same
+- [ ] Alter the parser code
+    - [ ] Add BERT embeddings
+        - [ ] Create ELMo file based on our dataset
+            - [ ] Downloading BERT
+            - [ ] Running BERT on our dataset
+            - [ ] Getting a vector for each word 
+                - [ ] Decision from Kulmiziev
+            - [ ] Saving the vectors to a hdf5 file
+    - [x] Add a way to evaluate with respect to the distribution
+        - [x] Line 179 in conll17_ud_eval.py - do we need to change this?
+- [ ] Write introduction chapter
+- [ ] Write background chapter
+- [ ] Conduct experiments for data collection
+    - [ ] Run experiments on Cirrus
+        - [ ] Start by running a parse of a subset of the dataset
+        - [ ] Write a slurm script
+        - [ ] Run the parser on the entire dataset
+- [ ] Analyze collected data
+    - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
+- [ ] Write methodology chapter
+    - [ ] How did I create the dataset
+- [ ] Revise literature review
+- [ ] Write results and discussion chapter
+    - [ ] What analysis techniques do I want to do?
+- [ ] Write conclusion chapter
+- [ ] Proofread and edit entire dissertation
+- [ ] Submit final dissertation

@@ -5210,7 +5210,7 @@
 8	a	a	DET	_	_	9	det	_	_
 9	boy	boy	NOUN	_	_	10	obl:agent	_	_
 10	gave	give	VERB	_	_	6	acl:relcl	_	_
-11	to	to	ADP	_	_	2	case	_	_
+11	to	to	ADP	_	_	12	case	_	_
 12	Logan	Logan	PROPN	_	_	10	obl:to	_	_
 13	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -6654,7 +6654,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	was	be	AUX	_	_	9	aux:pass	_	_
 9	passed	pass	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	2	case	_	_
+10	to	to	ADP	_	_	11	case	_	_
 11	Elizabeth	Elizabeth	PROPN	_	_	9	obl:to	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -23396,7 +23396,7 @@
 6	that	that	SCONJ	_	_	8	mark	_	_
 7	was	be	AUX	_	_	8	aux:pass	_	_
 8	offered	offer	VERB	_	_	5	acl:relcl	_	_
-9	to	to	ADP	_	_	1	case	_	_
+9	to	to	ADP	_	_	10	case	_	_
 10	Liam	Liam	PROPN	_	_	8	obl:to	_	_
 11	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -31439,7 +31439,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	was	be	AUX	_	_	9	aux:pass	_	_
 9	given	give	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	2	case	_	_
+10	to	to	ADP	_	_	11	case	_	_
 11	Oliver	Oliver	PROPN	_	_	9	obl:to	_	_
 12	by	by	ADP	_	_	13	case	_	_
 13	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
@@ -33185,7 +33185,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	was	be	AUX	_	_	9	aux:pass	_	_
 9	given	give	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	2	case	_	_
+10	to	to	ADP	_	_	11	case	_	_
 11	Sophia	Sophia	PROPN	_	_	9	obl:to	_	_
 12	by	by	ADP	_	_	14	case	_	_
 13	the	the	DET	_	_	14	det	_	_
@@ -41805,7 +41805,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	Charlotte	Charlotte	PROPN	_	_	9	obl:agent	_	_
 9	lent	lend	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	2	case	_	_
+10	to	to	ADP	_	_	11	case	_	_
 11	Emma	Emma	PROPN	_	_	9	obl:to	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -43996,7 +43996,7 @@
 5	Emma	Emma	PROPN	_	_	6	nsubj	_	_
 6	served	serve	VERB	_	_	3	ccomp	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	spoon	spoon	NOUN	_	_	6	nsubj	_	_
+8	spoon	spoon	NOUN	_	_	6	obj	_	_
 9	that	that	SCONJ	_	_	10	mark	_	_
 10	rolled	roll	VERB	_	_	8	acl:relcl	_	_
 11	to	to	ADP	_	_	13	case	_	_
@@ -46667,7 +46667,7 @@
 8	a	a	DET	_	_	9	det	_	_
 9	cow	cow	NOUN	_	_	10	obl:agent	_	_
 10	lent	lend	VERB	_	_	6	acl:relcl	_	_
-11	to	to	ADP	_	_	2	case	_	_
+11	to	to	ADP	_	_	11	case	_	_
 12	Emma	Emma	PROPN	_	_	10	obl:to	_	_
 13	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -48456,7 +48456,7 @@
 6	cow	cow	NOUN	_	_	7	nsubj	_	_
 7	painted	paint	VERB	_	_	3	ccomp	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	cake	cake	NOUN	_	_	7	nsubj	_	_
+9	cake	cake	NOUN	_	_	7	obj	_	_
 10	that	that	SCONJ	_	_	11	mark	_	_
 11	disintegrated	disintegrate	VERB	_	_	9	acl:relcl	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_

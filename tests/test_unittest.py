@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 from pandas.util.testing import assert_frame_equal
 sys.path.append('/Users/jacobdavies/SLPDissertation')
-from conversion import DissertationModule
+from conversion.conversion import DissertationModule
 
 class TestConversion(unittest.TestCase):
 
