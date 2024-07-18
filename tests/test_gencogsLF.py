@@ -11,7 +11,7 @@ class TestConversion(unittest.TestCase):
     def __init__(self, *args, **kwargs) -> None:
         unittest.TestCase.__init__(self, *args, **kwargs)
         self.test_instance = DissertationModule()
-        self.test_instance.load_data('gen_cogsLF.tsv') 
+        self.test_instance.load_data('data/gen_cogsLF.tsv') 
 
     def test_PP_modif_subj(self):
         

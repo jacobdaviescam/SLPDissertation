@@ -219,10 +219,11 @@ class DissertationModule:
 
                             main_verb = row['form']
 
-            passive = False
+
                 
         # --------------------------- Heads and Deprels ---------------------------  #
             for i, relation in enumerate(relations):
+                passive = False
                 relation = relation[0]
                 # print(relation)
 
@@ -282,6 +283,7 @@ class DissertationModule:
                                         
                                     else:
                                         deprel[index].append(self.sem2syns_passive[re.search(finder, relation).group('relationname')])
+
                                 elif self.worddata.iloc[int(re.search(finder, relation).group('head'))]['form'] in self.V_unacc:
                                     if re.search(finder, relation).group('relationname') == 'theme' and len(verbs[re.search(finder, relation).group('word')]) < 2:
                                         deprel[index].append('nsubj')
@@ -378,9 +380,20 @@ class DissertationModule:
                 else:
                     deprelations = [headdep[1] for headdep in v]
                     deprelations_index = [headdep[0] for headdep in v]
+                    agents = []
+                    ccomp = False
+                    for idx, val in enumerate(deprelations):
+                        agents.append(v[idx])
+                    for agent in agents:
+                        if len(deprel[agent[0]]) > 1 and deprel[agent[0]][1] == 'ccomp':
+                            ccomp = agent     
                     if main_verb_index in deprelations_index:
                         new_heads.append(v[deprelations_index.index(main_verb_index)])
                         deprel[k] = deprel[k][deprelations_index.index(main_verb_index)]
+
+                    elif len(deprelations) > 1 and ccomp is not False:
+                        new_heads.append(ccomp)
+                        deprel[k] = deprel[k][deprelations_index.index(ccomp[0])]
 
                     elif 'agent' in deprelations:
                         if 'theme' in deprelations:
@@ -444,6 +457,7 @@ class DissertationModule:
                     #     new_heads.append(v[deprelations.index('theme')])
                     elif 'case' in deprelations:
                         new_heads.append(v[deprelations.index('case')])
+
                     else:
                         new_heads.append(v[1])
 
@@ -528,30 +542,30 @@ class DissertationModule:
 
 # Example usage:
 # module = DissertationModule()
-# module.load_data('gen_cogsLF.tsv')
-# worddata = module.process_sentence(9735)
+# module.load_data('data/train.tsv')
+# worddata = module.process_sentence(24061)
 # print(worddata)
 
 # ---------------------------------------------------------------------------- #
 #                                  Main runner                                 #
 # ---------------------------------------------------------------------------- #
 
-# module = DissertationModule()
-# module.load_data('test.tsv')
-# sent_id = 1
-# for i in range(1, module.length):
-#     worddata = module.process_sentence(i)
-#     with open('UD_SLOG/slog-ud-test.conllu', 'a') as f:
-#         f.write(f'# sent_id = {sent_id}\n')
-#         f.write(f"# text = {module.output[i]['sentence']}\n")
-#         f.write(f"# distribution = {module.output[i]['distribution']}\n")
-#         if worddata is not None:
-#             worddata.to_csv(f, sep='\t', index=True, header = False)
-#             f.write('\n')
-#         else:
-#             print('No data found for sentence', i)
-#             print('\n')
-#         sent_id += 1
+module = DissertationModule()
+module.load_data('data/test.tsv')
+sent_id = 1
+for i in range(1, module.length):
+    worddata = module.process_sentence(i)
+    with open('UD_SLOG/slog-ud-test.conllu', 'a') as f:
+        f.write(f'# sent_id = {sent_id}\n')
+        f.write(f"# text = {module.output[i]['sentence']}\n")
+        f.write(f"# distribution = {module.output[i]['distribution']}\n")
+        if worddata is not None:
+            worddata.to_csv(f, sep='\t', index=True, header = False)
+            f.write('\n')
+        else:
+            print('No data found for sentence', i)
+            print('\n')
+        sent_id += 1
 
 
 

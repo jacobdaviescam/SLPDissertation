@@ -991,7 +991,7 @@
 3	declared	declare	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	a	a	DET	_	_	6	det	_	_
-6	child	child	NOUN	_	_	9	nsubj	_	_
+6	child	child	NOUN	_	_	7	nsubj	_	_
 7	intended	intend	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	run	run	VERB	_	_	7	xcomp	_	_
@@ -1832,7 +1832,7 @@
 1	Benjamin	Benjamin	PROPN	_	_	2	nsubj	_	_
 2	said	say	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	5	mark	_	_
-4	Samuel	Samuel	PROPN	_	_	7	nsubj	_	_
+4	Samuel	Samuel	PROPN	_	_	5	nsubj	_	_
 5	intended	intend	VERB	_	_	2	ccomp	_	_
 6	to	to	PART	_	_	7	mark	_	_
 7	run	run	VERB	_	_	5	xcomp	_	_
@@ -3950,7 +3950,7 @@
 3	liked	like	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	a	a	DET	_	_	6	det	_	_
-6	dog	dog	NOUN	_	_	9	nsubj	_	_
+6	dog	dog	NOUN	_	_	7	nsubj	_	_
 7	preferred	prefer	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	sneeze	sneeze	VERB	_	_	7	xcomp	_	_
@@ -5163,7 +5163,7 @@
 3	hoped	hope	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	the	the	DET	_	_	6	det	_	_
-6	girl	girl	NOUN	_	_	9	nsubj	_	_
+6	girl	girl	NOUN	_	_	7	nsubj	_	_
 7	preferred	prefer	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	walk	walk	VERB	_	_	7	xcomp	_	_
@@ -5485,9 +5485,9 @@
 4	a	a	DET	_	_	5	det	_	_
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Emma	Emma	PROPN	_	_	8	obl:agent	_	_
+7	Emma	Emma	PROPN	_	_	8	nsubj	_	_
 8	gave	give	VERB	_	_	5	acl:relcl	_	_
-9	William	William	PROPN	_	_	8	nsubj:pass	_	_
+9	William	William	PROPN	_	_	8	iobj	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 470
@@ -6584,7 +6584,7 @@
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	kid	kid	NOUN	_	_	9	obl:agent	_	_
+8	kid	kid	NOUN	_	_	9	nsubj	_	_
 9	gave	give	VERB	_	_	5	acl:relcl	_	_
 10	to	to	ADP	_	_	1	case	_	_
 11	Emma	Emma	PROPN	_	_	9	obl:to	_	_
@@ -6634,7 +6634,7 @@
 5	was	be	AUX	_	_	6	aux:pass	_	_
 6	served	serve	VERB	_	_	2	ccomp	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	donut	donut	NOUN	_	_	6	obj	_	_
+8	donut	donut	NOUN	_	_	6	nsubj	_	_
 9	that	that	SCONJ	_	_	10	mark	_	_
 10	floated	float	VERB	_	_	8	acl:relcl	_	_
 11	.	.	PUNCT	_	_	2	punct	_	_
@@ -6738,7 +6738,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cookie	cookie	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
+8	Emma	Emma	PROPN	_	_	9	nsubj	_	_
 9	sketched	sketch	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -8205,7 +8205,7 @@
 3	hoped	hope	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	a	a	DET	_	_	6	det	_	_
-6	mouse	mouse	NOUN	_	_	9	nsubj	_	_
+6	mouse	mouse	NOUN	_	_	7	nsubj	_	_
 7	intended	intend	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	clean	clean	VERB	_	_	7	xcomp	_	_
@@ -8808,7 +8808,7 @@
 1	Emma	Emma	PROPN	_	_	2	nsubj	_	_
 2	tolerated	tolerate	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	5	mark	_	_
-4	Noah	Noah	PROPN	_	_	7	nsubj	_	_
+4	Noah	Noah	PROPN	_	_	5	nsubj	_	_
 5	tried	try	VERB	_	_	2	ccomp	_	_
 6	to	to	PART	_	_	7	mark	_	_
 7	walk	walk	VERB	_	_	5	xcomp	_	_
@@ -9379,7 +9379,7 @@
 1	Bella	Bella	PROPN	_	_	2	nsubj	_	_
 2	hoped	hope	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	5	mark	_	_
-4	Olivia	Olivia	PROPN	_	_	7	nsubj	_	_
+4	Olivia	Olivia	PROPN	_	_	5	nsubj	_	_
 5	preferred	prefer	VERB	_	_	2	ccomp	_	_
 6	to	to	PART	_	_	7	mark	_	_
 7	run	run	VERB	_	_	5	xcomp	_	_
@@ -9403,7 +9403,7 @@
 1	Liam	Liam	PROPN	_	_	2	nsubj	_	_
 2	declared	declare	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	5	mark	_	_
-4	Noah	Noah	PROPN	_	_	7	nsubj	_	_
+4	Noah	Noah	PROPN	_	_	5	nsubj	_	_
 5	wanted	want	VERB	_	_	2	ccomp	_	_
 6	to	to	PART	_	_	7	mark	_	_
 7	walk	walk	VERB	_	_	5	xcomp	_	_
@@ -9831,7 +9831,7 @@
 2	girl	girl	NOUN	_	_	3	nsubj	_	_
 3	confessed	confess	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	6	mark	_	_
-5	Elijah	Elijah	PROPN	_	_	8	nsubj	_	_
+5	Elijah	Elijah	PROPN	_	_	6	nsubj	_	_
 6	planned	plan	VERB	_	_	3	ccomp	_	_
 7	to	to	PART	_	_	8	mark	_	_
 8	run	run	VERB	_	_	6	xcomp	_	_
@@ -10479,7 +10479,7 @@
 2	girl	girl	NOUN	_	_	3	nsubj	_	_
 3	liked	like	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	6	mark	_	_
-5	Noah	Noah	PROPN	_	_	8	nsubj	_	_
+5	Noah	Noah	PROPN	_	_	6	nsubj	_	_
 6	yearned	yearn	VERB	_	_	3	ccomp	_	_
 7	to	to	PART	_	_	8	mark	_	_
 8	run	run	VERB	_	_	6	xcomp	_	_
@@ -10502,7 +10502,7 @@
 2	boy	boy	NOUN	_	_	3	nsubj	_	_
 3	hoped	hope	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	6	mark	_	_
-5	Liam	Liam	PROPN	_	_	8	nsubj	_	_
+5	Liam	Liam	PROPN	_	_	6	nsubj	_	_
 6	needed	need	VERB	_	_	3	ccomp	_	_
 7	to	to	PART	_	_	8	mark	_	_
 8	jog	jog	VERB	_	_	6	xcomp	_	_
@@ -14328,7 +14328,7 @@
 1	Sophia	Sophia	PROPN	_	_	2	nsubj	_	_
 2	said	say	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	5	mark	_	_
-4	Emma	Emma	PROPN	_	_	7	nsubj	_	_
+4	Emma	Emma	PROPN	_	_	5	nsubj	_	_
 5	yearned	yearn	VERB	_	_	2	ccomp	_	_
 6	to	to	PART	_	_	7	mark	_	_
 7	read	read	NOUN	_	_	5	xcomp	_	_
@@ -15132,7 +15132,7 @@
 7	hoped	hope	VERB	_	_	5	acl:relcl	_	_
 8	that	that	SCONJ	_	_	11	mark	_	_
 9	a	a	DET	_	_	10	det	_	_
-10	bird	bird	NOUN	_	_	13	nsubj	_	_
+10	bird	bird	NOUN	_	_	11	nsubj	_	_
 11	wanted	want	VERB	_	_	7	ccomp	_	_
 12	to	to	PART	_	_	13	mark	_	_
 13	sleep	sleep	VERB	_	_	11	xcomp	_	_
@@ -15339,7 +15339,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
+8	Emma	Emma	PROPN	_	_	9	nsubj	_	_
 9	knew	know	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -15682,7 +15682,7 @@
 2	girl	girl	NOUN	_	_	3	nsubj	_	_
 3	liked	like	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	6	mark	_	_
-5	Mia	Mia	PROPN	_	_	8	nsubj	_	_
+5	Mia	Mia	PROPN	_	_	6	nsubj	_	_
 6	preferred	prefer	VERB	_	_	3	ccomp	_	_
 7	to	to	PART	_	_	8	mark	_	_
 8	walk	walk	VERB	_	_	6	xcomp	_	_
@@ -16371,7 +16371,7 @@
 3	liked	like	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	a	a	DET	_	_	6	det	_	_
-6	prince	prince	NOUN	_	_	9	nsubj	_	_
+6	prince	prince	NOUN	_	_	7	nsubj	_	_
 7	loved	love	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	talk	talk	VERB	_	_	7	xcomp	_	_
@@ -20373,9 +20373,9 @@
 6	strawberry	strawberry	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	student	student	NOUN	_	_	10	obl:agent	_	_
+9	student	student	NOUN	_	_	10	nsubj	_	_
 10	forwarded	forward	VERB	_	_	6	acl:relcl	_	_
-11	William	William	PROPN	_	_	10	nsubj:pass	_	_
+11	William	William	PROPN	_	_	10	iobj	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 1723
@@ -20748,7 +20748,7 @@
 5	rose	rose	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	boy	boy	NOUN	_	_	9	obl:agent	_	_
+8	boy	boy	NOUN	_	_	9	nsubj	_	_
 9	liked	like	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -21125,7 +21125,7 @@
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	girl	girl	NOUN	_	_	9	obl:agent	_	_
+8	girl	girl	NOUN	_	_	9	nsubj	_	_
 9	loved	love	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -21408,7 +21408,7 @@
 1	Oliver	Oliver	PROPN	_	_	2	nsubj	_	_
 2	noticed	notice	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	5	mark	_	_
-4	Emma	Emma	PROPN	_	_	7	nsubj	_	_
+4	Emma	Emma	PROPN	_	_	5	nsubj	_	_
 5	enjoyed	enjoy	VERB	_	_	2	ccomp	_	_
 6	to	to	PART	_	_	7	mark	_	_
 7	sleep	sleep	VERB	_	_	5	xcomp	_	_
@@ -22036,7 +22036,7 @@
 8	the	the	DET	_	_	9	det	_	_
 9	key	key	NOUN	_	_	7	obj	_	_
 10	that	that	SCONJ	_	_	12	mark	_	_
-11	Isaac	Isaac	PROPN	_	_	12	obl:agent	_	_
+11	Isaac	Isaac	PROPN	_	_	12	nsubj	_	_
 12	touched	touch	VERB	_	_	9	acl:relcl	_	_
 13	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -22574,7 +22574,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	rose	rose	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Emma	Emma	PROPN	_	_	8	obl:agent	_	_
+7	Emma	Emma	PROPN	_	_	8	nsubj	_	_
 8	brought	bring	VERB	_	_	5	acl:relcl	_	_
 9	to	to	ADP	_	_	11	case	_	_
 10	a	a	DET	_	_	11	det	_	_
@@ -22913,7 +22913,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	weapon	weapon	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Sophia	Sophia	PROPN	_	_	9	obl:agent	_	_
+8	Sophia	Sophia	PROPN	_	_	9	nsubj	_	_
 9	respected	respect	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -23480,7 +23480,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cookie	cookie	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Liam	Liam	PROPN	_	_	9	obl:agent	_	_
+8	Liam	Liam	PROPN	_	_	9	nsubj	_	_
 9	admired	admire	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -30681,7 +30681,7 @@
 2	believed	believe	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	6	mark	_	_
 4	the	the	DET	_	_	5	det	_	_
-5	sheep	sheep	NOUN	_	_	8	nsubj	_	_
+5	sheep	sheep	NOUN	_	_	6	nsubj	_	_
 6	tried	try	VERB	_	_	2	ccomp	_	_
 7	to	to	PART	_	_	8	mark	_	_
 8	run	run	VERB	_	_	6	xcomp	_	_
@@ -31204,7 +31204,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Harper	Harper	PROPN	_	_	9	obl:agent	_	_
+8	Harper	Harper	PROPN	_	_	9	nsubj	_	_
 9	painted	paint	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -31382,7 +31382,7 @@
 3	believed	believe	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	the	the	DET	_	_	6	det	_	_
-6	kid	kid	NOUN	_	_	9	nsubj	_	_
+6	kid	kid	NOUN	_	_	7	nsubj	_	_
 7	needed	need	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	walk	walk	VERB	_	_	7	xcomp	_	_
@@ -31861,7 +31861,7 @@
 2	noticed	notice	VERB	_	_	0	root	_	_
 3	that	that	SCONJ	_	_	6	mark	_	_
 4	a	a	DET	_	_	5	det	_	_
-5	student	student	NOUN	_	_	8	nsubj	_	_
+5	student	student	NOUN	_	_	6	nsubj	_	_
 6	wanted	want	VERB	_	_	2	ccomp	_	_
 7	to	to	PART	_	_	8	mark	_	_
 8	jog	jog	VERB	_	_	6	xcomp	_	_
@@ -33486,9 +33486,9 @@
 6	block	block	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	cat	cat	NOUN	_	_	10	obl:agent	_	_
+9	cat	cat	NOUN	_	_	10	nsubj	_	_
 10	rented	rent	VERB	_	_	6	acl:relcl	_	_
-11	Levi	Levi	PROPN	_	_	10	nsubj:pass	_	_
+11	Levi	Levi	PROPN	_	_	10	iobj	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 2791
@@ -34689,7 +34689,7 @@
 5	cookie	cookie	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	girl	girl	NOUN	_	_	9	obl:agent	_	_
+8	girl	girl	NOUN	_	_	9	nsubj	_	_
 9	doubled	double	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -36900,10 +36900,10 @@
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	boy	boy	NOUN	_	_	9	obl:agent	_	_
+8	boy	boy	NOUN	_	_	9	nsubj	_	_
 9	handed	hand	VERB	_	_	5	acl:relcl	_	_
 10	a	a	DET	_	_	11	det	_	_
-11	girl	girl	NOUN	_	_	9	nsubj:pass	_	_
+11	girl	girl	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 3066
@@ -37137,7 +37137,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	brush	brush	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Charlotte	Charlotte	PROPN	_	_	8	obl:agent	_	_
+7	Charlotte	Charlotte	PROPN	_	_	8	nsubj	_	_
 8	nursed	nurse	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -37983,7 +37983,7 @@
 4	a	a	DET	_	_	5	det	_	_
 5	melon	melon	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Liam	Liam	PROPN	_	_	8	obl:agent	_	_
+7	Liam	Liam	PROPN	_	_	8	nsubj	_	_
 8	reddened	redden	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -37996,7 +37996,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	needle	needle	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Liam	Liam	PROPN	_	_	8	obl:agent	_	_
+7	Liam	Liam	PROPN	_	_	8	nsubj	_	_
 8	dusted	dust	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -38064,10 +38064,10 @@
 5	the	the	DET	_	_	6	det	_	_
 6	melon	melon	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Noah	Noah	PROPN	_	_	9	obl:agent	_	_
+8	Noah	Noah	PROPN	_	_	9	nsubj	_	_
 9	sent	send	VERB	_	_	6	acl:relcl	_	_
 10	the	the	DET	_	_	11	det	_	_
-11	boy	boy	NOUN	_	_	9	nsubj:pass	_	_
+11	boy	boy	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 3157
@@ -38180,10 +38180,10 @@
 5	raisin	raisin	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	girl	girl	NOUN	_	_	9	obl:agent	_	_
+8	girl	girl	NOUN	_	_	9	nsubj	_	_
 9	gave	give	VERB	_	_	5	acl:relcl	_	_
 10	the	the	DET	_	_	11	det	_	_
-11	cat	cat	NOUN	_	_	9	nsubj:pass	_	_
+11	cat	cat	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 3165
@@ -38776,7 +38776,7 @@
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	journalist	journalist	NOUN	_	_	10	obl:agent	_	_
+9	journalist	journalist	NOUN	_	_	10	nsubj	_	_
 10	rolled	roll	VERB	_	_	6	acl:relcl	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -39260,9 +39260,9 @@
 9	hammer	hammer	NOUN	_	_	7	obj	_	_
 10	that	that	SCONJ	_	_	13	mark	_	_
 11	the	the	DET	_	_	12	det	_	_
-12	mouse	mouse	NOUN	_	_	13	obl:agent	_	_
+12	mouse	mouse	NOUN	_	_	13	nsubj	_	_
 13	forwarded	forward	VERB	_	_	9	acl:relcl	_	_
-14	Emma	Emma	PROPN	_	_	13	nsubj:pass	_	_
+14	Emma	Emma	PROPN	_	_	13	iobj	_	_
 15	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 3249
@@ -41074,10 +41074,10 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Anthony	Anthony	PROPN	_	_	9	obl:agent	_	_
+8	Anthony	Anthony	PROPN	_	_	9	nsubj	_	_
 9	mailed	mail	VERB	_	_	6	acl:relcl	_	_
 10	a	a	DET	_	_	11	det	_	_
-11	bear	bear	NOUN	_	_	9	nsubj:pass	_	_
+11	bear	bear	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 3399
@@ -41285,7 +41285,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	toothbrush	toothbrush	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Elijah	Elijah	PROPN	_	_	9	obl:agent	_	_
+8	Elijah	Elijah	PROPN	_	_	9	nsubj	_	_
 9	poked	poke	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -41839,7 +41839,7 @@
 3	liked	like	VERB	_	_	0	root	_	_
 4	that	that	SCONJ	_	_	7	mark	_	_
 5	the	the	DET	_	_	6	det	_	_
-6	giraffe	giraffe	NOUN	_	_	9	nsubj	_	_
+6	giraffe	giraffe	NOUN	_	_	7	nsubj	_	_
 7	wanted	want	VERB	_	_	3	ccomp	_	_
 8	to	to	PART	_	_	9	mark	_	_
 9	walk	walk	VERB	_	_	7	xcomp	_	_
@@ -41880,7 +41880,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	potato	potato	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Noah	Noah	PROPN	_	_	8	obl:agent	_	_
+7	Noah	Noah	PROPN	_	_	8	nsubj	_	_
 8	passed	pass	VERB	_	_	5	acl:relcl	_	_
 9	to	to	ADP	_	_	11	case	_	_
 10	the	the	DET	_	_	11	det	_	_
@@ -43801,7 +43801,7 @@
 11	girl	girl	NOUN	_	_	12	nsubj	_	_
 12	liked	like	VERB	_	_	8	ccomp	_	_
 13	that	that	SCONJ	_	_	15	mark	_	_
-14	Olivia	Olivia	PROPN	_	_	17	nsubj	_	_
+14	Olivia	Olivia	PROPN	_	_	15	nsubj	_	_
 15	preferred	prefer	VERB	_	_	12	ccomp	_	_
 16	to	to	PART	_	_	17	mark	_	_
 17	walk	walk	VERB	_	_	15	xcomp	_	_
@@ -43896,7 +43896,7 @@
 5	drink	drink	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	pony	pony	NOUN	_	_	9	obl:agent	_	_
+8	pony	pony	NOUN	_	_	9	nsubj	_	_
 9	burned	burn	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -44252,7 +44252,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	rose	rose	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Liam	Liam	PROPN	_	_	9	obl:agent	_	_
+8	Liam	Liam	PROPN	_	_	9	nsubj	_	_
 9	liked	like	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -46432,10 +46432,10 @@
 5	cookie	cookie	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	lion	lion	NOUN	_	_	9	obl:agent	_	_
+8	lion	lion	NOUN	_	_	9	nsubj	_	_
 9	handed	hand	VERB	_	_	5	acl:relcl	_	_
 10	a	a	DET	_	_	11	det	_	_
-11	cat	cat	NOUN	_	_	9	nsubj:pass	_	_
+11	cat	cat	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 3817
@@ -47111,7 +47111,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	donut	donut	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Oliver	Oliver	PROPN	_	_	9	obl:agent	_	_
+8	Oliver	Oliver	PROPN	_	_	9	nsubj	_	_
 9	froze	freeze	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -47624,7 +47624,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Zoey	Zoey	PROPN	_	_	9	obl:agent	_	_
+8	Zoey	Zoey	PROPN	_	_	9	nsubj	_	_
 9	painted	paint	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -47658,7 +47658,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	bucket	bucket	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Brooklyn	Brooklyn	PROPN	_	_	8	obl:agent	_	_
+7	Brooklyn	Brooklyn	PROPN	_	_	8	nsubj	_	_
 8	rolled	roll	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -47812,7 +47812,7 @@
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	professor	professor	NOUN	_	_	10	obl:agent	_	_
+9	professor	professor	NOUN	_	_	10	nsubj	_	_
 10	gave	give	VERB	_	_	6	acl:relcl	_	_
 11	to	to	ADP	_	_	13	case	_	_
 12	the	the	DET	_	_	13	det	_	_

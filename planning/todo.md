@@ -31,9 +31,10 @@
 - [ ] Write background chapter
 - [ ] Conduct experiments for data collection
     - [ ] Run experiments on Cirrus
-        - [ ] Start by running a parse of a subset of the dataset
-        - [ ] Write a slurm script
-        - [ ] Run the parser on the entire dataset
+        - [x] Start by running a parse of a subset of the dataset
+        - [x] Write a slurm script
+        - [x] Run the parser on the entire dataset
+    - [ ] Rerun the training on both the transition and graph based parsers - as there is an error with the training script. 
 - [ ] Analyze collected data
     - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
 - [ ] Write methodology chapter

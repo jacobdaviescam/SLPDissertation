@@ -11,7 +11,7 @@ class TestConversion(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         unittest.TestCase.__init__(self, *args, **kwargs)
         self.test_instance = DissertationModule()
-        self.test_instance.load_data('train.tsv')
+        self.test_instance.load_data('data/train.tsv')
         
     def test_in_distribution(self):
         
@@ -382,6 +382,23 @@ class TestConversion(unittest.TestCase):
 
         assert_frame_equal(actual_output, expected_output)
 
+
+    # def test_RC_passive(self):
+
+    #     input_data = 24061  
+
+    #     # sentence = James was mailed a newspaper that a customer disintegrated .
+
+    #     conversion = {'form': ['James', 'was', 'mailed', 'a', 'newspaper', 'that', 'a', 'customer', 'disintegrated', '.'], 'lemma': ['James', 'be', 'mail', 'a', 'newspaper', 'that', 'a', 'customer', 'disintegrate', 'the', 'cake', '.'], 'pos':['DET', 'NOUN', 'VERB', 'DET', 'NOUN', 'SCONJ', 'VERB', 'DET', 'NOUN', 'DET', 'NOUN', 'PUNCT'], 'head':[1, 2, 0, 4, 2, 6, 4, 8, 6, 10, 6, 2], 'deprel': ['det', 'nsubj', 'root', 'det', 'obj', 'mark', 'acl:relcl', 'det', 'iobj', 'det', 'obj', 'punct']}
+
+
+    #     expected_output = pd.DataFrame(conversion)  
+
+        
+
+    #     actual_output = self.test_instance.process_sentence(input_data) 
+
+    #     assert_frame_equal(actual_output, expected_output)
 
 # Run the tests
 if __name__ == '__main__':

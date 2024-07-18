@@ -5208,9 +5208,9 @@
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	boy	boy	NOUN	_	_	10	obl:agent	_	_
+9	boy	boy	NOUN	_	_	10	nsubj	_	_
 10	gave	give	VERB	_	_	6	acl:relcl	_	_
-11	to	to	ADP	_	_	12	case	_	_
+11	to	to	ADP	_	_	2	case	_	_
 12	Logan	Logan	PROPN	_	_	10	obl:to	_	_
 13	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -5792,10 +5792,10 @@
 4	the	the	DET	_	_	5	det	_	_
 5	banana	banana	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Amelia	Amelia	PROPN	_	_	8	obl:agent	_	_
+7	Amelia	Amelia	PROPN	_	_	8	nsubj	_	_
 8	gave	give	VERB	_	_	5	acl:relcl	_	_
 9	the	the	DET	_	_	10	det	_	_
-10	boy	boy	NOUN	_	_	8	nsubj:pass	_	_
+10	boy	boy	NOUN	_	_	8	iobj	_	_
 11	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 496
@@ -6416,7 +6416,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	donut	donut	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Elizabeth	Elizabeth	PROPN	_	_	8	obl:agent	_	_
+7	Elizabeth	Elizabeth	PROPN	_	_	8	nsubj	_	_
 8	rolled	roll	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -6443,10 +6443,10 @@
 5	book	book	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	pupil	pupil	NOUN	_	_	9	obl:agent	_	_
+8	pupil	pupil	NOUN	_	_	9	nsubj	_	_
 9	gave	give	VERB	_	_	5	acl:relcl	_	_
 10	a	a	DET	_	_	11	det	_	_
-11	girl	girl	NOUN	_	_	9	nsubj:pass	_	_
+11	girl	girl	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 546
@@ -6654,7 +6654,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	was	be	AUX	_	_	9	aux:pass	_	_
 9	passed	pass	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	11	case	_	_
+10	to	to	ADP	_	_	2	case	_	_
 11	Elizabeth	Elizabeth	PROPN	_	_	9	obl:to	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -13939,7 +13939,7 @@
 6	drink	drink	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	judge	judge	NOUN	_	_	10	obl:agent	_	_
+9	judge	judge	NOUN	_	_	10	nsubj	_	_
 10	stabbed	stab	VERB	_	_	6	acl:relcl	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -14047,7 +14047,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	bottle	bottle	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Olivia	Olivia	PROPN	_	_	9	obl:agent	_	_
+8	Olivia	Olivia	PROPN	_	_	9	nsubj	_	_
 9	enlarged	enlarge	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -14185,7 +14185,7 @@
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	boy	boy	NOUN	_	_	10	obl:agent	_	_
+9	boy	boy	NOUN	_	_	10	nsubj	_	_
 10	ate	eat	VERB	_	_	6	acl:relcl	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -15796,7 +15796,7 @@
 6	bat	bat	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	duck	duck	NOUN	_	_	10	obl:agent	_	_
+9	duck	duck	NOUN	_	_	10	nsubj	_	_
 10	sketched	sketch	VERB	_	_	6	acl:relcl	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -16072,7 +16072,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	donut	donut	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Oliver	Oliver	PROPN	_	_	9	obl:agent	_	_
+8	Oliver	Oliver	PROPN	_	_	9	nsubj	_	_
 9	ate	eat	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -20251,7 +20251,7 @@
 5	chair	chair	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	girl	girl	NOUN	_	_	9	obl:agent	_	_
+8	girl	girl	NOUN	_	_	9	nsubj	_	_
 9	loved	love	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -21893,7 +21893,7 @@
 5	pumpkin	pumpkin	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	boy	boy	NOUN	_	_	9	obl:agent	_	_
+8	boy	boy	NOUN	_	_	9	nsubj	_	_
 9	sold	sell	VERB	_	_	5	acl:relcl	_	_
 10	to	to	ADP	_	_	12	case	_	_
 11	the	the	DET	_	_	12	det	_	_
@@ -22165,7 +22165,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	fruit	fruit	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Levi	Levi	PROPN	_	_	9	obl:agent	_	_
+8	Levi	Levi	PROPN	_	_	9	nsubj	_	_
 9	changed	change	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -23220,7 +23220,7 @@
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	cat	cat	NOUN	_	_	10	obl:agent	_	_
+9	cat	cat	NOUN	_	_	10	nsubj	_	_
 10	examined	examine	VERB	_	_	6	acl:relcl	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -23396,7 +23396,7 @@
 6	that	that	SCONJ	_	_	8	mark	_	_
 7	was	be	AUX	_	_	8	aux:pass	_	_
 8	offered	offer	VERB	_	_	5	acl:relcl	_	_
-9	to	to	ADP	_	_	10	case	_	_
+9	to	to	ADP	_	_	1	case	_	_
 10	Liam	Liam	PROPN	_	_	8	obl:to	_	_
 11	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -24603,7 +24603,7 @@
 8	a	a	DET	_	_	9	det	_	_
 9	bottle	bottle	NOUN	_	_	7	obj	_	_
 10	that	that	SCONJ	_	_	12	mark	_	_
-11	Elijah	Elijah	PROPN	_	_	12	obl:agent	_	_
+11	Elijah	Elijah	PROPN	_	_	12	nsubj	_	_
 12	sold	sell	VERB	_	_	9	acl:relcl	_	_
 13	to	to	ADP	_	_	5	case	_	_
 14	Samuel	Samuel	PROPN	_	_	12	obl:to	_	_
@@ -25797,9 +25797,9 @@
 5	a	a	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Liam	Liam	PROPN	_	_	9	obl:agent	_	_
+8	Liam	Liam	PROPN	_	_	9	nsubj	_	_
 9	fed	feed	VERB	_	_	6	acl:relcl	_	_
-10	Emma	Emma	PROPN	_	_	9	nsubj:pass	_	_
+10	Emma	Emma	PROPN	_	_	9	iobj	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 2153
@@ -28596,9 +28596,9 @@
 6	spoon	spoon	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	boy	boy	NOUN	_	_	10	obl:agent	_	_
+9	boy	boy	NOUN	_	_	10	nsubj	_	_
 10	sold	sell	VERB	_	_	6	acl:relcl	_	_
-11	Elizabeth	Elizabeth	PROPN	_	_	10	nsubj:pass	_	_
+11	Elizabeth	Elizabeth	PROPN	_	_	10	iobj	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 2391
@@ -29645,7 +29645,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	doll	doll	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
+8	Emma	Emma	PROPN	_	_	9	nsubj	_	_
 9	decomposed	decompose	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -31439,7 +31439,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	was	be	AUX	_	_	9	aux:pass	_	_
 9	given	give	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	11	case	_	_
+10	to	to	ADP	_	_	2	case	_	_
 11	Oliver	Oliver	PROPN	_	_	9	obl:to	_	_
 12	by	by	ADP	_	_	13	case	_	_
 13	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
@@ -31676,7 +31676,7 @@
 6	donut	donut	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	girl	girl	NOUN	_	_	10	obl:agent	_	_
+9	girl	girl	NOUN	_	_	10	nsubj	_	_
 10	helped	help	VERB	_	_	6	acl:relcl	_	_
 11	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -33075,9 +33075,9 @@
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	lawyer	lawyer	NOUN	_	_	9	obl:agent	_	_
+8	lawyer	lawyer	NOUN	_	_	9	nsubj	_	_
 9	lent	lend	VERB	_	_	5	acl:relcl	_	_
-10	Caleb	Caleb	PROPN	_	_	9	nsubj:pass	_	_
+10	Caleb	Caleb	PROPN	_	_	9	iobj	_	_
 11	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 2760
@@ -33185,7 +33185,7 @@
 7	that	that	SCONJ	_	_	9	mark	_	_
 8	was	be	AUX	_	_	9	aux:pass	_	_
 9	given	give	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	11	case	_	_
+10	to	to	ADP	_	_	2	case	_	_
 11	Sophia	Sophia	PROPN	_	_	9	obl:to	_	_
 12	by	by	ADP	_	_	14	case	_	_
 13	the	the	DET	_	_	14	det	_	_
@@ -33883,7 +33883,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	mandarin	mandarin	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Olivia	Olivia	PROPN	_	_	8	obl:agent	_	_
+7	Olivia	Olivia	PROPN	_	_	8	nsubj	_	_
 8	ate	eat	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -34049,7 +34049,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	rose	rose	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Emma	Emma	PROPN	_	_	8	obl:agent	_	_
+7	Emma	Emma	PROPN	_	_	8	nsubj	_	_
 8	floated	float	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -34713,9 +34713,9 @@
 4	the	the	DET	_	_	5	det	_	_
 5	donut	donut	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	Joshua	Joshua	PROPN	_	_	8	obl:agent	_	_
+7	Joshua	Joshua	PROPN	_	_	8	nsubj	_	_
 8	gave	give	VERB	_	_	5	acl:relcl	_	_
-9	James	James	PROPN	_	_	8	nsubj:pass	_	_
+9	James	James	PROPN	_	_	8	iobj	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 2890
@@ -35227,7 +35227,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Jacob	Jacob	PROPN	_	_	9	obl:agent	_	_
+8	Jacob	Jacob	PROPN	_	_	9	nsubj	_	_
 9	hunted	hunt	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -35534,7 +35534,7 @@
 5	chemical	chemical	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	chicken	chicken	NOUN	_	_	9	obl:agent	_	_
+8	chicken	chicken	NOUN	_	_	9	nsubj	_	_
 9	froze	freeze	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -36081,7 +36081,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Isabella	Isabella	PROPN	_	_	9	obl:agent	_	_
+8	Isabella	Isabella	PROPN	_	_	9	nsubj	_	_
 9	liked	like	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -36750,7 +36750,7 @@
 5	a	a	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Bella	Bella	PROPN	_	_	9	obl:agent	_	_
+8	Bella	Bella	PROPN	_	_	9	nsubj	_	_
 9	dusted	dust	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -38366,7 +38366,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	block	block	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
+8	Emma	Emma	PROPN	_	_	9	nsubj	_	_
 9	broke	break	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -38806,10 +38806,10 @@
 5	the	the	DET	_	_	6	det	_	_
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Lucas	Lucas	PROPN	_	_	9	obl:agent	_	_
+8	Lucas	Lucas	PROPN	_	_	9	nsubj	_	_
 9	gave	give	VERB	_	_	6	acl:relcl	_	_
 10	the	the	DET	_	_	11	det	_	_
-11	penguin	penguin	NOUN	_	_	9	nsubj:pass	_	_
+11	penguin	penguin	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
 # sent_id = 3218
@@ -40073,7 +40073,7 @@
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	bunny	bunny	NOUN	_	_	9	obl:agent	_	_
+8	bunny	bunny	NOUN	_	_	9	nsubj	_	_
 9	burned	burn	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -41803,9 +41803,9 @@
 5	the	the	DET	_	_	6	det	_	_
 6	rose	rose	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Charlotte	Charlotte	PROPN	_	_	9	obl:agent	_	_
+8	Charlotte	Charlotte	PROPN	_	_	9	nsubj	_	_
 9	lent	lend	VERB	_	_	6	acl:relcl	_	_
-10	to	to	ADP	_	_	11	case	_	_
+10	to	to	ADP	_	_	2	case	_	_
 11	Emma	Emma	PROPN	_	_	9	obl:to	_	_
 12	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -42936,10 +42936,10 @@
 5	book	book	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	monkey	monkey	NOUN	_	_	9	obl:agent	_	_
+8	monkey	monkey	NOUN	_	_	9	nsubj	_	_
 9	handed	hand	VERB	_	_	5	acl:relcl	_	_
 10	a	a	DET	_	_	11	det	_	_
-11	girl	girl	NOUN	_	_	9	nsubj:pass	_	_
+11	girl	girl	NOUN	_	_	9	iobj	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_
 
 # sent_id = 3554
@@ -43961,7 +43961,7 @@
 8	cake	cake	NOUN	_	_	6	obj	_	_
 9	that	that	SCONJ	_	_	12	mark	_	_
 10	the	the	DET	_	_	11	det	_	_
-11	dog	dog	NOUN	_	_	12	obl:agent	_	_
+11	dog	dog	NOUN	_	_	12	nsubj	_	_
 12	poked	poke	VERB	_	_	8	acl:relcl	_	_
 13	.	.	PUNCT	_	_	2	punct	_	_
 
@@ -43996,7 +43996,7 @@
 5	Emma	Emma	PROPN	_	_	6	nsubj	_	_
 6	served	serve	VERB	_	_	3	ccomp	_	_
 7	the	the	DET	_	_	8	det	_	_
-8	spoon	spoon	NOUN	_	_	6	obj	_	_
+8	spoon	spoon	NOUN	_	_	6	nsubj	_	_
 9	that	that	SCONJ	_	_	10	mark	_	_
 10	rolled	roll	VERB	_	_	8	acl:relcl	_	_
 11	to	to	ADP	_	_	13	case	_	_
@@ -44487,7 +44487,7 @@
 4	the	the	DET	_	_	5	det	_	_
 5	cake	cake	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	8	mark	_	_
-7	William	William	PROPN	_	_	8	obl:agent	_	_
+7	William	William	PROPN	_	_	8	nsubj	_	_
 8	missed	miss	VERB	_	_	5	acl:relcl	_	_
 9	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -44933,7 +44933,7 @@
 5	doll	doll	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	cat	cat	NOUN	_	_	9	obl:agent	_	_
+8	cat	cat	NOUN	_	_	9	nsubj	_	_
 9	painted	paint	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -46625,7 +46625,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	balloon	balloon	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Emma	Emma	PROPN	_	_	9	obl:agent	_	_
+8	Emma	Emma	PROPN	_	_	9	nsubj	_	_
 9	dusted	dust	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -46665,9 +46665,9 @@
 6	cake	cake	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	10	mark	_	_
 8	a	a	DET	_	_	9	det	_	_
-9	cow	cow	NOUN	_	_	10	obl:agent	_	_
+9	cow	cow	NOUN	_	_	10	nsubj	_	_
 10	lent	lend	VERB	_	_	6	acl:relcl	_	_
-11	to	to	ADP	_	_	11	case	_	_
+11	to	to	ADP	_	_	2	case	_	_
 12	Emma	Emma	PROPN	_	_	10	obl:to	_	_
 13	.	.	PUNCT	_	_	4	punct	_	_
 
@@ -48141,7 +48141,7 @@
 5	melon	melon	NOUN	_	_	3	obj	_	_
 6	that	that	SCONJ	_	_	9	mark	_	_
 7	a	a	DET	_	_	8	det	_	_
-8	dog	dog	NOUN	_	_	9	obl:agent	_	_
+8	dog	dog	NOUN	_	_	9	nsubj	_	_
 9	ate	eat	VERB	_	_	5	acl:relcl	_	_
 10	.	.	PUNCT	_	_	3	punct	_	_
 
@@ -48456,7 +48456,7 @@
 6	cow	cow	NOUN	_	_	7	nsubj	_	_
 7	painted	paint	VERB	_	_	3	ccomp	_	_
 8	the	the	DET	_	_	9	det	_	_
-9	cake	cake	NOUN	_	_	7	obj	_	_
+9	cake	cake	NOUN	_	_	7	nsubj	_	_
 10	that	that	SCONJ	_	_	11	mark	_	_
 11	disintegrated	disintegrate	VERB	_	_	9	acl:relcl	_	_
 12	.	.	PUNCT	_	_	3	punct	_	_
@@ -48679,7 +48679,7 @@
 5	the	the	DET	_	_	6	det	_	_
 6	donut	donut	NOUN	_	_	4	obj	_	_
 7	that	that	SCONJ	_	_	9	mark	_	_
-8	Liam	Liam	PROPN	_	_	9	obl:agent	_	_
+8	Liam	Liam	PROPN	_	_	9	nsubj	_	_
 9	shortened	shorten	VERB	_	_	6	acl:relcl	_	_
 10	.	.	PUNCT	_	_	4	punct	_	_
 
