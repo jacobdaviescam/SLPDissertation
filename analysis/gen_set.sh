@@ -25,7 +25,7 @@ for file in "$directory"/*; do
         gentype="$(basename "$file")"
         echo "Processing $gentype"
         combined_filename="$second_directory/$gentype"      
-        java -jar ../MaltEval/dist-20141005/lib/MaltEval.jar  -s "$file" -g "$combined_filename" --GroupBy Sentence:exactmatch >> graph_gentypes.txt
+        java -jar MaltEval/dist-20141005/lib/MaltEval.jar  -s "$file" -g "$combined_filename" --GroupBy Sentence:exactmatch --Metric "LA" >> graph_gentypesLA.txt
     fi
 done
 

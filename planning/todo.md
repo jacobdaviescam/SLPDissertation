@@ -30,14 +30,16 @@
 - [ ] Write introduction chapter
 - [ ] Write background chapter
 - [ ] Conduct experiments for data collection
-    - [ ] Run experiments on Cirrus
+    - [x] Run experiments on Cirrus
         - [x] Start by running a parse of a subset of the dataset
         - [x] Write a slurm script
         - [x] Run the parser on the entire dataset
     - [x] Rerun the training on both the transition and graph based parsers - as there is an error with the training script. 
-    - [ ] Rerun the conversion on Q_long_mv as the punctuation is wrong in the gold.
+    - [x] Rerun the conversion on Q_long_mv as the punctuation is wrong in the gold.
+        - [ ] Find a way to get this type back into the generalisation dataset. 
 - [ ] Analyze collected data
-    - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
+    - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures?
+    - [ ] What is the effect of using external BERT embeddings on the performance of the parser?
 - [ ] Write methodology chapter
     - [ ] How did I create the dataset
 - [ ] Revise literature review
