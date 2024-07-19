@@ -12,7 +12,7 @@ def strip_comments_from_file(filename):
 
 def main():
     # Get the list of files in the output/generalisation_sets directory
-    directory = '/Users/jacobdavies/SLPDissertation/UD_SLOG/generalisation_sets'
+    directory = '/Users/jacobdavies/SLPDissertation/UD_SLOG/test_sets'
     files_to_strip = [os.path.join(directory, filename) for filename in os.listdir(directory)]
 
     # Call the strip_comments_from_file function for each file

@@ -20,7 +20,7 @@ def subset_generalisation(filename):
                 f.write(sentence.serialize())
 
 def main():
-    subset_generalisation('output/generalisation/out.conllu')
+    subset_generalisation('output/parser/.conllu')
 
 if __name__ == "__main__":
     main()
