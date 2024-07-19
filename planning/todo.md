@@ -34,7 +34,8 @@
         - [x] Start by running a parse of a subset of the dataset
         - [x] Write a slurm script
         - [x] Run the parser on the entire dataset
-    - [ ] Rerun the training on both the transition and graph based parsers - as there is an error with the training script. 
+    - [x] Rerun the training on both the transition and graph based parsers - as there is an error with the training script. 
+    - [ ] Rerun the conversion on Q_long_mv as the punctuation is wrong in the gold.
 - [ ] Analyze collected data
     - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures. 
 - [ ] Write methodology chapter

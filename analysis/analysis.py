@@ -20,7 +20,7 @@ def subset_generalisation(filename):
                 f.write(sentence.serialize())
 
 def main():
-    subset_generalisation('output/parser/.conllu')
+    subset_generalisation('UD_SLOG/test_sets/slog-ud-generalisation.conllu')
 
 if __name__ == "__main__":
     main()
