@@ -16,9 +16,11 @@ def main():
     files_to_strip = [os.path.join(directory, filename) for filename in os.listdir(directory)]
 
     # Call the strip_comments_from_file function for each file
-    for filename in files_to_strip:
-        strip_comments_from_file(filename)
-        print(f"Comments stripped from {filename}")
+    # for filename in files_to_strip:
+    #     strip_comments_from_file(filename)
+    #     print(f"Comments stripped from {filename}")
+
+    strip_comments_from_file('./transitionrlmost2.conllu')
 
 if __name__ == "__main__":
     main()

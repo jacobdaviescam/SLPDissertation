@@ -1,0 +1,120 @@
+Evaluation arguments: --GroupBy Deprel --confusion-matrix 1 -g UD_SLOG/stripped_full/slog-ud-generalisation_stripped.conllu -s output/parser/stripped/graph_genset_out_stripped.conllu
+====================================================
+Gold:   UD_SLOG/stripped_full/slog-ud-generalisation_stripped.conllu
+Parsed: output/parser/stripped/graph_genset_out_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> LAS
+
+====================================================
+
+parseraccuracy /    treebankaccuracy /    Deprel
+-----------------------------------------------------
+0.73                0.776                 acl:relcl
+0.991               0.899                 aux
+0.943               0.976                 aux:pass
+0.833               0.761                 case
+0.821               0.84                  ccomp
+0.958               0.959                 det
+0.427               0.419                 iobj
+0.744               0.759                 mark
+0.871               0.844                 nmod:beside
+0.96                0.841                 nmod:in
+0.826               0.83                  nmod:on
+0.827               0.825                 nsubj
+0.766               0.783                 nsubj:pass
+0.755               0.817                 obj
+0.836               0.904                 obl:agent
+0.694               0.614                 obl:to
+0.967               0.967                 punct
+0.877               0.877                 root
+0.463               0.894                 xcomp
+
+====================================================
+Gold:   UD_SLOG/stripped_full/slog-ud-generalisation_stripped.conllu
+Parsed: output/parser/stripped/graph_genset_out_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> LAS
+
+====================================================
+
+Confusion table for Deprel
+frequency   Gold / System
+------------------------------------
+1261        nsubj / root
+1181        root / acl:relcl
+1167        iobj / obj
+1154        obl:to / obj
+1038        case / obl:to
+825         nsubj:pass / root
+737         case / iobj
+576         case / mark
+413         obl:to / xcomp
+277         nmod:on / nsubj
+273         nmod:in / nsubj
+254         obj / nsubj
+250         obj / obl:to
+231         nmod:beside / nmod:on
+219         obj / iobj
+209         acl:relcl / ccomp
+194         root / ccomp
+182         nsubj / nsubj:pass
+179         root / nmod:beside
+167         obj / nmod:beside
+165         obj / nmod:on
+163         nmod:beside / nsubj
+162         nmod:on / nsubj:pass
+153         nmod:in / nmod:beside
+151         nmod:in / nsubj:pass
+150         root / iobj
+146         obl:to / nsubj
+145         nmod:beside / nsubj:pass
+143         nmod:in / nmod:on
+142         acl:relcl / nsubj:pass
+141         aux / acl:relcl
+134         acl:relcl / aux:pass
+109         obj / acl:relcl
+107         root / obj
+105         acl:relcl / nsubj
+101         root / case
+95          aux / nsubj
+92          aux / det
+88          nmod:beside / case
+87          obl:to / nsubj:pass
+85          root / obl:agent
+82          obj / nmod:in
+65          obj / nsubj:pass
+61          ccomp / acl:relcl
+61          root / nmod:on
+55          nmod:on / case
+49          obl:to / acl:relcl
+43          nmod:on / nmod:beside
+37          nmod:beside / obl:agent
+36          obl:to / iobj
+61 more...
+
+Confusion matrix for Deprel
+acl:relcl   aux   aux:pass   case   ccomp   det   iobj   mark   nmod:beside   nmod:in   nmod:on   nsubj   nsubj:pass   obj     obl:agent   obl:to   punct   root    xcomp   Col: gold / Row: system
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-           0     134        0      209     0     2      0      0             0         0         105     142          0       0           0        0       0       0       acl:relcl
+141         -     0          16     0       92    0      0      0             0         7         95      0            0       0           0        0       0       0       aux
+0           0     -          0      0       0     0      0      0             0         0         0       0            0       0           0        0       0       0       aux:pass
+0           15    9          -      0       0     737    576    0             0         0         0       0            1       8           1038     0       0       0       case
+61          0     1          14     -       0     3      0      3             0         3         2       0            3       1           0        0       6       0       ccomp
+0           0     0          0      0       -     0      0      0             0         0         0       0            0       0           0        0       0       0       det
+0           0     0          0      0       0     -      0      0             0         0         0       21           1167    0           1        0       8       0       iobj
+0           0     0          3      0       0     0      -      0             0         0         0       0            0       0           0        0       0       0       mark
+0           0     0          88     0       0     2      0      -             17        231       163     145          13      37          8        0       0       0       nmod:beside
+0           0     0          24     0       0     0      0      153           -         143       273     151          0       36          0        0       0       0       nmod:in
+0           0     0          55     0       0     10     0      43            0         -         277     162          22      28          22       0       0       0       nmod:on
+0           0     0          0      0       0     0      0      0             0         7         -       182          7       0           6        0       1261    0       nsubj
+0           0     0          0      0       0     1      0      0             0         3         23      -            17      0           1        0       825     0       nsubj:pass
+109         3     0          1      0       0     219    0      167           82        165       254     65           -       16          250      0       0       0       obj
+0           0     0          15     0       3     0      0      0             15        0         5       6            0       -           0        0       0       0       obl:agent
+49          0     0          4      0       2     36     0      2             0         22        146     87           1154    2           -        0       0       413     obl:to
+0           0     0          0      0       0     0      0      0             0         0         0       0            0       0           0        -       0       0       punct
+1181        0     8          101    194     0     150    0      179           2         61        1       0            107     85          6        0       -       19      root
+0           0     0          0      0       0     0      0      0             0         2         22      2            0       1           9        0       0       -       xcomp
+
+
