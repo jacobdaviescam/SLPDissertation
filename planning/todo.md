@@ -19,32 +19,38 @@
         - [x] Check that the length of forms, lemmas, pos, heads, deprel are the same
 - [ ] Alter the parser code
     - [ ] Add BERT embeddings
-        - [ ] Create ELMo file based on our dataset
-            - [ ] Downloading BERT
-            - [ ] Running BERT on our dataset
-            - [ ] Getting a vector for each word 
-                - [ ] Decision from Kulmiziev
-            - [ ] Saving the vectors to a hdf5 file
     - [x] Add a way to evaluate with respect to the distribution
         - [x] Line 179 in conll17_ud_eval.py - do we need to change this?
-- [ ] Write introduction chapter
+- [x] Write introduction chapter
 - [ ] Write background chapter
-- [ ] Conduct experiments for data collection
+    - [x] Contextual Embeddings
+    - [x] Feature Representations
+    - [ ] Entangled Representations
+- [x] Conduct experiments for data collection
     - [x] Run experiments on Cirrus
         - [x] Start by running a parse of a subset of the dataset
         - [x] Write a slurm script
         - [x] Run the parser on the entire dataset
     - [x] Rerun the training on both the transition and graph based parsers - as there is an error with the training script. 
     - [x] Rerun the conversion on Q_long_mv as the punctuation is wrong in the gold.
-        - [ ] Find a way to get this type back into the generalisation dataset. 
+        - [x] Find a way to get this type back into the generalisation dataset. 
+    - [ ] Run the transition model with less and more stack elements
+    - [ ] Run the graph-based model and force projectivity
+    - [ ] Run both graph and transition one more time and then average the result over the different seeds - report seeds for each random initialisation. 
 - [ ] Analyze collected data
+    - [ ] Labeled attachment score by sentence length 
+    - [ ] Labeled F-score by dependency length
+    - [ ] Labeled F-score by distance to root
+    - [ ] Labeled precision and recall for non-projective dependencies
+    - [ ] Accuracies on different parts of speech
     - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures?
     - [ ] What is the effect of using external BERT embeddings on the performance of the parser?
-- [ ] Write methodology chapter
-    - [ ] How did I create the dataset
-- [ ] Revise literature review
+- [x] Write methodology chapter
+    - [x] How did I create the dataset
+- [x] Revise literature review
 - [ ] Write results and discussion chapter
     - [ ] What analysis techniques do I want to do?
+    - [ ] t-SNE plot 
 - [ ] Write conclusion chapter
 - [ ] Proofread and edit entire dissertation
 - [ ] Submit final dissertation
