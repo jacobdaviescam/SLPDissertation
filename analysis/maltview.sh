@@ -4,7 +4,9 @@ parser="$1"
 
 generalisation="$2"
 
-s=output/parser/"$parser"_generalisation_sets/stripped/"$generalisation"_stripped.conllu
+randinit="$3"
+
+s=output/parser/"$parser"_generalisation_sets/randinit"$randinit"/"$generalisation"_stripped.conllu
 
 g=UD_SLOG/generalisation_sets/stripped/"$generalisation"_stripped.conllu
 

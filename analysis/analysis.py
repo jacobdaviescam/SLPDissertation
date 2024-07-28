@@ -20,7 +20,7 @@ def subset_generalisation(filename):
                 f.write(sentence.serialize())
 
 def main():
-    subset_generalisation('output/parser/for_eval/randinit2/transition2out.conllu')
+    subset_generalisation('output/graph/projective_graph_out.conllu')
 
 if __name__ == "__main__":
     main()

@@ -17,15 +17,16 @@
     - [x] Sanity Checks
         - [x] Check that there is only one root
         - [x] Check that the length of forms, lemmas, pos, heads, deprel are the same
+    - [ ] 'To' as mark is wrong in the generalisation dataset for RC_modif_iobj and Q_modified_NPs
 - [ ] Alter the parser code
     - [ ] Add BERT embeddings
+        - [ ] In the repo from Matthias
     - [x] Add a way to evaluate with respect to the distribution
         - [x] Line 179 in conll17_ud_eval.py - do we need to change this?
 - [x] Write introduction chapter
 - [ ] Write background chapter
     - [x] Contextual Embeddings
     - [x] Feature Representations
-    - [ ] Entangled Representations
 - [x] Conduct experiments for data collection
     - [x] Run experiments on Cirrus
         - [x] Start by running a parse of a subset of the dataset
@@ -35,15 +36,18 @@
     - [x] Rerun the conversion on Q_long_mv as the punctuation is wrong in the gold.
         - [x] Find a way to get this type back into the generalisation dataset. 
     - [ ] Run the transition model with less and more stack elements
-    - [ ] Run the graph-based model and force projectivity
+    - [x] Run the graph-based model and force projectivity
     - [ ] Run both graph and transition one more time and then average the result over the different seeds - report seeds for each random initialisation. 
+    - [ ] Run the models with BERT embeddings
+        - [ ] Try to use the GPU version of the model on cirrus to save resources
+    - [ ] Run the models with the external embeddings (GLOVE)
 - [ ] Analyze collected data
     - [ ] Labeled attachment score by sentence length 
-    - [ ] Labeled F-score by dependency length
-    - [ ] Labeled F-score by distance to root
+    - [x] Labeled F-score by dependency length
+    - [x] Labeled F-score by distance to root
     - [ ] Labeled precision and recall for non-projective dependencies
-    - [ ] Accuracies on different parts of speech
-    - [ ] What is the effect of using transition vs graph based parsers on different types of syntactic structures?
+    - [x] Accuracies on different parts of speech
+    - [ ] Test what happens if we just use one LSTM on the graph based parser on PP depth. 
     - [ ] What is the effect of using external BERT embeddings on the performance of the parser?
 - [x] Write methodology chapter
     - [x] How did I create the dataset
@@ -51,6 +55,9 @@
 - [ ] Write results and discussion chapter
     - [ ] What analysis techniques do I want to do?
     - [ ] t-SNE plot 
+        - [ ] Get the word embeddings after training using the get_word_embeddinds function. 
+    - [ ] What is the difference between teh AM parser and our graph based parser (AM parser is a graph based parser)
+        - [ ] Dist embedding
 - [ ] Write conclusion chapter
 - [ ] Proofread and edit entire dissertation
 - [ ] Submit final dissertation
