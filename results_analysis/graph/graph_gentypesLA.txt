@@ -1,0 +1,272 @@
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/CP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/CP_3_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/CP_3_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/CP_3_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+1               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/CP_5-12_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/CP_5-12_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/CP_5-12_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/CP_5-12_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.995           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/PP_3_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+1               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/PP_5-12_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_5-12_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_5-12_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/PP_5-12_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.672           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/PP_modif_iobj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_iobj_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_iobj_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/PP_modif_iobj_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.641           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/Q_dobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_dobj_ditransV_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_dobj_ditransV_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/Q_dobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.092           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/Q_long_mv_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_long_mv_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_long_mv_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/Q_long_mv_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.866           Row mean
+999             Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.399           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/Q_subj_active_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_subj_active_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_subj_active_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/Q_subj_active_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+1               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/Q_subj_passive_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_subj_passive_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_subj_passive_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/Q_subj_passive_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+1               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/RC_iobj_extracted_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/RC_iobj_extracted_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/RC_iobj_extracted_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/RC_iobj_extracted_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/RC_modif_iobj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/RC_modif_iobj_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/RC_modif_iobj_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/RC_modif_iobj_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.522           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/RC_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/RC_modif_subj_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/RC_modif_subj_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/RC_modif_subj_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.012           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/center_embed_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/center_embed_3_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/center_embed_3_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/center_embed_3_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+1               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/parser/graph_generalisation_sets/stripped/center_embed_5-12_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/center_embed_5-12_stripped.conllu --GroupBy Sentence:exactmatch --Metric LA
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/center_embed_5-12_stripped.conllu
+Parsed: output/parser/graph_generalisation_sets/stripped/center_embed_5-12_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LA
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.981           Row mean
+1000            Row count
+-------------------------
+

@@ -1,0 +1,229 @@
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy Sentence:exactmatch
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LAS
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy RelationLength:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+precision /    RelationLength
+-----------------------------
+1              -1
+0.925          1
+1              2
+0.556          3
+1              4
+-              6
+-              7
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy RelationLength:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+recall /    RelationLength
+--------------------------
+1           -1
+1           1
+1           2
+1           3
+1           4
+0           6
+0           7
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy ArcDepth:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    ArcDepth
+------------------------
+1              0
+0.862          1
+1              2
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy ArcDepth:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+recall /    ArcDepth
+---------------------
+1           0
+1           1
+0.681       2
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy Deprel:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+precision /    Deprel
+------------------------
+0              acl:relcl
+1              aux
+1              case
+1              det
+1              nsubj
+0.357          obj
+-              obl:to
+1              punct
+1              root
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy Deprel:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+recall /    Deprel
+---------------------
+-           acl:relcl
+1           aux
+0.012       case
+1           det
+1           nsubj
+1           obj
+0           obl:to
+1           punct
+1           root
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy ArcDepth --confusion-matrix 1 --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    recall /    fscore /    ArcDepth
+------------------------------------------------
+1              1           1           0
+0.862          1           0.926       1
+1              0.681       0.81        2
+
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+Confusion table for ArcDepth
+frequency   Gold / System
+-------------------------
+798         2 / 1
+
+
+Confusion matrix for ArcDepth
+0     1     2     Col: gold / Row: system
+-----------------------------------------
+-     0     0     0
+0     -     0     1
+0     798   -     2
+
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy RelationLength:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+fscore /    RelationLength
+--------------------------
+1           -1
+0.961       1
+1           2
+0.715       3
+1           4
+-           6
+-           7
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy ArcDepth:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+fscore /    ArcDepth
+---------------------
+1           0
+0.926       1
+0.81        2
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu --GroupBy Deprel:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_iobj_ditransV_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_iobj_ditransV_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+fscore /    Deprel
+---------------------
+-           acl:relcl
+1           aux
+0.024       case
+1           det
+1           nsubj
+0.527       obj
+-           obl:to
+1           punct
+1           root
+

@@ -1,0 +1,14 @@
+From the generalistaion text:
+
+Need to restrip the generalistaion script as some were wrong. 
+
+1-6000 : The only inaccuracies are the incorrect labels of nmod:beside.
+
+Really struggles when the RC modifies the subject rather than the object as is seen in training. 
+
+10000: Incorrect 'to' head
+11000: Incorrect punctuation head (sometimes correct - find the percentage)
+12000: No errors
+13000: 'obj' instead of 'iobj' in ditransitive
+14000: struggles with 'who' as the iobj of ditransitive
+16000: attributes 'who' as the obj of the main verb not the relative verb. 

@@ -1,0 +1,308 @@
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy Sentence:exactmatch
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LAS
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+1               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy RelationLength:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+precision /    RelationLength
+-----------------------------
+1              -1
+1              1
+1              2
+1              3
+1              4
+1              12
+1              13
+1              14
+1              15
+1              16
+1              17
+1              18
+1              19
+1              20
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy RelationLength:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+recall /    RelationLength
+--------------------------
+1           -1
+1           1
+1           2
+1           3
+1           4
+1           12
+1           13
+1           14
+1           15
+1           16
+1           17
+1           18
+1           19
+1           20
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy ArcDepth:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    ArcDepth
+------------------------
+1              0
+1              1
+1              2
+1              3
+1              4
+1              5
+1              6
+1              7
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy ArcDepth:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+recall /    ArcDepth
+---------------------
+1           0
+1           1
+1           2
+1           3
+1           4
+1           5
+1           6
+1           7
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy Deprel:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+precision /    Deprel
+--------------------------
+1              case
+1              ccomp
+1              det
+1              iobj
+1              mark
+1              nmod:beside
+1              nmod:in
+1              nmod:on
+1              nsubj
+1              obj
+1              obl:to
+1              punct
+1              root
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy Deprel:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+recall /    Deprel
+-----------------------
+1           case
+1           ccomp
+1           det
+1           iobj
+1           mark
+1           nmod:beside
+1           nmod:in
+1           nmod:on
+1           nsubj
+1           obj
+1           obl:to
+1           punct
+1           root
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy ArcDepth --confusion-matrix 1 --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    recall /    fscore /    ArcDepth
+------------------------------------------------
+1              1           1           0
+1              1           1           1
+1              1           1           2
+1              1           1           3
+1              1           1           4
+1              1           1           5
+1              1           1           6
+1              1           1           7
+
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+Confusion table for ArcDepth
+frequency   Gold / System
+-------------------------
+
+
+Confusion matrix for ArcDepth
+0     1     2     3     4     5     6     7     Col: gold / Row: system
+-----------------------------------------------------------------------
+-     0     0     0     0     0     0     0     0
+0     -     0     0     0     0     0     0     1
+0     0     -     0     0     0     0     0     2
+0     0     0     -     0     0     0     0     3
+0     0     0     0     -     0     0     0     4
+0     0     0     0     0     -     0     0     5
+0     0     0     0     0     0     -     0     6
+0     0     0     0     0     0     0     -     7
+
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy RelationLength:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+fscore /    RelationLength
+--------------------------
+1           -1
+1           1
+1           2
+1           3
+1           4
+1           12
+1           13
+1           14
+1           15
+1           16
+1           17
+1           18
+1           19
+1           20
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy ArcDepth:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+fscore /    ArcDepth
+---------------------
+1           0
+1           1
+1           2
+1           3
+1           4
+1           5
+1           6
+1           7
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy Deprel:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+fscore /    Deprel
+-----------------------
+1           case
+1           ccomp
+1           det
+1           iobj
+1           mark
+1           nmod:beside
+1           nmod:in
+1           nmod:on
+1           nsubj
+1           obj
+1           obl:to
+1           punct
+1           root
+
+Evaluation arguments: -s output/transition/pos/gensets/PP_3_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu --GroupBy SentenceLength:accuracy
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_3_stripped.conllu
+Parsed: output/transition/pos/gensets/PP_3_stripped.conllu
+====================================================
+GroupBy-> SentenceLength
+Metric-> LAS
+
+====================================================
+
+accuracy /    SentenceLength
+----------------------------
+1             14
+1             15
+1             16
+1             17
+1             18
+1             19
+1             20
+1             21
+1             22
+

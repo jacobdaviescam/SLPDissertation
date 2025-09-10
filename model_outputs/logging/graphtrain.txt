@@ -1,0 +1,31 @@
+2024-07-18 17:11:48.234 | DEBUG    | uuparser.utils:load_iso_dict:200 - Loading ISO dict from /Users/jacobdavies/miniconda3/envs/diss/lib/python3.7/site-packages/uuparser/utils/ud2.2_iso.json
+2024-07-18 17:11:48.235 | WARNING  | uuparser.options_manager:prepareDev:203 - No dev data for noname, consider adding option --create-dev to create dev data from training set
+2024-07-18 17:11:48.236 | WARNING  | uuparser.options_manager:prepareDev:206 - Can't do model selection for noname as prediction on dev data is off
+2024-07-18 17:11:57.751 | INFO     | uuparser.parser:run:15 - Working with a graph-based parser
+2024-07-18 17:11:57.752 | DEBUG    | uuparser.parser:run:25 - Preparing vocab
+2024-07-18 17:11:57.752 | DEBUG    | uuparser.utils:read_conll_dir:282 - Max size for each corpus: 
+2024-07-18 17:11:57.753 | INFO     | uuparser.utils:read_conll:301 - Reading UD_SLOG/slog-ud-train.conllu
+2024-07-18 17:12:01.391 | DEBUG    | uuparser.utils:read_conll:367 - 32754 sentences read
+2024-07-18 17:12:01.391 | INFO     | uuparser.utils:read_conll:377 - Time: 3.6s
+2024-07-18 17:12:01.391 | DEBUG    | uuparser.parser:run:27 - Finished collecting vocab
+2024-07-18 17:12:01.391 | INFO     | uuparser.parser:run:30 - Saving params to output/graph/params.pickle
+2024-07-18 17:12:01.392 | DEBUG    | uuparser.parser:run:33 - Initializing the model
+2024-07-18 17:12:01.394 | INFO     | uuparser.feature_extractor:init_lookups:238 - No word external embeddings found: all vectors initialised randomly
+2024-07-18 17:12:01.394 | INFO     | uuparser.feature_extractor:init_lookups:248 - No character external embeddings found: all vectors initialised randomly
+2024-07-18 17:12:01.394 | DEBUG    | uuparser.feature_extractor:__init__:111 - Word-level LSTM input size: 300
+2024-07-18 17:12:01.403 | INFO     | uuparser.parser:run:49 - Starting epoch 1
+2024-07-18 17:12:01.403 | DEBUG    | uuparser.utils:read_conll_dir:282 - Max size for each corpus: 
+2024-07-18 17:12:01.403 | INFO     | uuparser.utils:read_conll:301 - Reading UD_SLOG/slog-ud-train.conllu
+2024-07-18 17:12:04.137 | DEBUG    | uuparser.utils:read_conll:367 - 32754 sentences read
+2024-07-18 17:12:04.137 | INFO     | uuparser.utils:read_conll:377 - Time: 2.7s
+2024-07-18 17:12:06.799 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 100 Loss: 0.016 Errors: 0.891 Labeled Errors: 0.850 Time: 2.7s
+2024-07-18 17:12:08.738 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 200 Loss: 0.016 Errors: 0.888 Labeled Errors: 0.676 Time: 1.9s
+2024-07-18 17:12:10.813 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 300 Loss: -0.071 Errors: 0.737 Labeled Errors: 0.318 Time: 2.1s
+2024-07-18 17:12:12.395 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 400 Loss: -0.037 Errors: 0.277 Labeled Errors: 0.168 Time: 1.6s
+2024-07-18 17:12:14.101 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 500 Loss: -0.028 Errors: 0.233 Labeled Errors: 0.134 Time: 1.7s
+2024-07-18 17:12:15.871 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 600 Loss: -0.017 Errors: 0.173 Labeled Errors: 0.120 Time: 1.8s
+2024-07-18 17:12:17.356 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 700 Loss: -0.007 Errors: 0.122 Labeled Errors: 0.097 Time: 1.5s
+2024-07-18 17:12:18.761 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 800 Loss: -0.006 Errors: 0.098 Labeled Errors: 0.067 Time: 1.4s
+2024-07-18 17:12:20.198 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 900 Loss: -0.024 Errors: 0.086 Labeled Errors: 0.066 Time: 1.4s
+2024-07-18 17:12:21.624 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 1000 Loss: -0.011 Errors: 0.079 Labeled Errors: 0.062 Time: 1.4s
+2024-07-18 17:12:22.993 | DEBUG    | uuparser.mstlstm:Train:215 - Processing sentence number: 1100 Loss: -0.015 Errors: 0.095 Labeled Errors: 0.037 Time: 1.4s
