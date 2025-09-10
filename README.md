@@ -1,4 +1,4 @@
-# Dependency Parsing Research Portfolio
+# Dependency Parsing Research
 
 A comprehensive showcase of advanced Python development, experimental methodology, and data visualization skills applied to natural language processing research.
 
@@ -141,32 +141,3 @@ This framework has been successfully applied to:
 2. **Linguistic Generalization**: Analysis of parser performance on complex syntactic structures
 3. **Error Analysis**: Detailed categorization of parsing failures by linguistic phenomena
 4. **Performance Optimization**: Identification of architecture-specific strengths and weaknesses
-
-## Skills Demonstrated
-
-### Python Development
-- **Advanced OOP**: Complex class hierarchies with multiple inheritance
-- **Type Safety**: Comprehensive type hints and dataclass usage
-- **Error Handling**: Robust exception handling and validation
-- **Testing**: Full unittest coverage with mock objects and edge cases
-- **Documentation**: Comprehensive docstrings and inline documentation
-
-### Experimental Methodology
-- **Systematic Design**: Controlled comparison across multiple variables
-- **Statistical Rigor**: Significance testing and effect size calculation
-- **Reproducibility**: Configurable experiments with version control
-- **Scalability**: Framework supports addition of new parsers and test sets
-
-### Data Analysis & Visualization
-- **Publication Standards**: IEEE/ACL conference-ready figure quality
-- **Statistical Visualization**: Error bars, confidence intervals, significance markers
-- **Comprehensive Coverage**: Multiple plot types for different analysis needs
-- **Professional Presentation**: Clean, readable visualizations suitable for technical audiences
-
----
-
-This portfolio demonstrates production-ready code quality, rigorous experimental methodology, and professional presentation standards suitable for both research and industry applications.
-
----
-
-*This repository represents advanced technical work in computational linguistics, demonstrating both theoretical understanding and practical implementation skills valuable in data science, ML engineering, and research roles.*
