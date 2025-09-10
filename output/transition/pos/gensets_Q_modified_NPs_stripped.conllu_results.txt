@@ -1,0 +1,389 @@
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Sentence:exactmatch
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LAS
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.448           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy RelationLength:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+precision /    RelationLength
+-----------------------------
+0.663          -1
+-              0
+0.829          1
+0.862          2
+0.892          3
+0.551          4
+0.709          5
+0.778          6
+0.93           7
+0.437          8
+0.651          9
+0.545          10
+0.27           11
+0.318          12
+0.529          13
+0.267          14
+0.091          15
+0              16
+-              17
+0              18
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy RelationLength:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+recall /    RelationLength
+--------------------------
+0.663       -1
+0           0
+0.943       1
+0.965       2
+0.793       3
+0.466       4
+0.535       5
+0.315       6
+0.507       7
+0.556       8
+0.543       9
+0.417       10
+0.358       11
+0.4         12
+0.409       13
+0.267       14
+0.167       15
+0           16
+0           17
+-           18
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    ArcDepth
+------------------------
+-              -1
+0.663          0
+0.992          1
+0.832          2
+0.642          3
+0.313          4
+0.03           5
+0              6
+0              7
+0              8
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+recall /    ArcDepth
+---------------------
+0           -1
+0.663       0
+0.773       1
+0.695       2
+0.671       3
+0.658       4
+0.576       5
+-           6
+-           7
+-           8
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Deprel:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+precision /    Deprel
+--------------------------
+0.928          acl:relcl
+1              aux
+0.991          aux:pass
+0.97           case
+0.85           ccomp
+0.973          det
+0.865          iobj
+0.884          mark
+0.662          nmod:beside
+0.314          nmod:in
+0.598          nmod:on
+0.714          nsubj
+0.888          nsubj:pass
+0.585          obj
+0.964          obl:agent
+0.834          obl:to
+1              punct
+0.664          root
+0.333          xcomp
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Deprel:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+recall /    Deprel
+-----------------------
+0.936       acl:relcl
+0.428       aux
+1           aux:pass
+0.989       case
+0.944       ccomp
+1           det
+0.842       iobj
+0.996       mark
+0.665       nmod:beside
+0.608       nmod:in
+0.598       nmod:on
+0.679       nsubj
+0.973       nsubj:pass
+0.751       obj
+0.964       obl:agent
+0.72        obl:to
+0.845       punct
+0.663       root
+0.8         xcomp
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth --confusion-matrix 1 --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    recall /    fscore /    ArcDepth
+------------------------------------------------
+-              0           -           -1
+0.663          0.663       0.663       0
+0.992          0.773       0.869       1
+0.832          0.695       0.757       2
+0.642          0.671       0.656       3
+0.313          0.658       0.424       4
+0.03           0.576       0.057       5
+0              -           -           6
+0              -           -           7
+0              -           -           8
+
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+Confusion table for ArcDepth
+frequency   Gold / System
+-------------------------
+443         3 / 5
+425         2 / 3
+376         1 / 2
+341         2 / 4
+337         1 / 0
+217         3 / 4
+196         0 / 3
+164         1 / 3
+92          4 / 6
+79          0 / 4
+73          2 / 5
+57          1 / 4
+45          4 / 5
+40          2 / 6
+37          1 / 5
+35          0 / 2
+27          3 / 6
+22          2 / 1
+22          0 / 5
+17          2 / 7
+15          1 / 6
+14          4 / 7
+12          4 / 2
+11          5 / 7
+3           0 / 1
+3           5 / 6
+2           0 / 6
+2           1 / 7
+2           3 / 7
+2           2 / 8
+1           -1 / 4
+1           4 / 1
+
+
+Confusion matrix for ArcDepth
+-1   0     1     2     3     4     5     Col: gold / Row: system
+----------------------------------------------------------------
+0    -     3     35    196   79    22    0
+0    337   -     376   164   57    37    1
+0    0     22    -     425   341   73    2
+0    0     0     0     -     217   443   3
+0    0     1     12    0     -     45    4
+0    0     0     0     0     0     -     5
+0    0     0     0     0     0     0     6
+0    0     0     0     0     0     0     7
+0    0     0     0     0     0     0     8
+
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy RelationLength:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+fscore /    RelationLength
+--------------------------
+0.663       -1
+-           0
+0.883       1
+0.91        2
+0.839       3
+0.505       4
+0.61        5
+0.448       6
+0.656       7
+0.489       8
+0.592       9
+0.473       10
+0.308       11
+0.354       12
+0.462       13
+0.267       14
+0.118       15
+-           16
+-           17
+-           18
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+fscore /    ArcDepth
+---------------------
+-           -1
+0.663       0
+0.869       1
+0.757       2
+0.656       3
+0.424       4
+0.057       5
+-           6
+-           7
+-           8
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Deprel:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+fscore /    Deprel
+-----------------------
+0.932       acl:relcl
+0.6         aux
+0.996       aux:pass
+0.979       case
+0.895       ccomp
+0.986       det
+0.853       iobj
+0.937       mark
+0.663       nmod:beside
+0.414       nmod:in
+0.598       nmod:on
+0.696       nsubj
+0.928       nsubj:pass
+0.658       obj
+0.964       obl:agent
+0.773       obl:to
+0.916       punct
+0.664       root
+0.471       xcomp
+
+Evaluation arguments: -s output/transition/pos/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy SentenceLength:accuracy
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/transition/pos/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> SentenceLength
+Metric-> LAS
+
+====================================================
+
+accuracy /    SentenceLength
+----------------------------
+0.971         7
+0.867         8
+0.571         9
+0.915         10
+0.781         11
+0.766         12
+0.854         13
+0.822         14
+0.733         15
+0.775         16
+0.818         17
+0.917         18
+0.684         19
+

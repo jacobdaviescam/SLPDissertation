@@ -1,0 +1,350 @@
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy Sentence:exactmatch
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LAS
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0               Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy RelationLength:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+precision /    RelationLength
+-----------------------------
+0.022          -1
+0.869          1
+0.726          2
+0.524          3
+0.072          4
+0.15           5
+0.939          6
+0.983          7
+0.75           8
+0.824          9
+0.471          10
+0.423          11
+0.284          12
+0.412          13
+0.143          14
+0.357          15
+0.429          16
+0.212          17
+0.333          18
+0              19
+0.25           20
+1              21
+1              24
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy RelationLength:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+recall /    RelationLength
+--------------------------
+0.022       -1
+0.983       1
+0.57        2
+0.421       3
+0.121       4
+0.175       5
+0.656       6
+0.231       7
+0.463       8
+0.512       9
+0.364       10
+0.733       11
+0.479       12
+1           13
+0.8         14
+0.833       15
+0.75        16
+1           17
+1           18
+-           19
+1           20
+1           21
+1           24
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy ArcDepth:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    ArcDepth
+------------------------
+0.022          0
+0.139          1
+0.256          2
+0.41           3
+0.158          4
+0.023          5
+0              6
+0              7
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy ArcDepth:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+recall /    ArcDepth
+---------------------
+0.022       0
+0.098       1
+0.276       2
+0.339       3
+0.398       4
+0.25        5
+-           6
+-           7
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy Deprel:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+precision /    Deprel
+--------------------------
+0              acl:relcl
+1              aux:pass
+0.898          case
+0.026          ccomp
+1              det
+0.883          iobj
+0.099          mark
+0.459          nmod:beside
+0.651          nmod:in
+0.995          nmod:on
+0.025          nsubj
+0              nsubj:pass
+0.931          obj
+0.967          obl:agent
+0.989          obl:to
+1              punct
+0.022          root
+1              xcomp
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy Deprel:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+recall /    Deprel
+-----------------------
+-           acl:relcl
+1           aux:pass
+0.463       case
+0.043       ccomp
+1           det
+1           iobj
+0.712       mark
+0.343       nmod:beside
+0.299       nmod:in
+0.327       nmod:on
+0.026       nsubj
+0           nsubj:pass
+0.984       obj
+0.99        obl:agent
+1           obl:to
+1           punct
+0.022       root
+1           xcomp
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy ArcDepth --confusion-matrix 1 --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    recall /    fscore /    ArcDepth
+------------------------------------------------
+0.022          0.022       0.022       0
+0.139          0.098       0.115       1
+0.256          0.276       0.265       2
+0.41           0.339       0.371       3
+0.158          0.398       0.226       4
+0.023          0.25        0.042       5
+0              -           -           6
+0              -           -           7
+
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+Confusion table for ArcDepth
+frequency   Gold / System
+-------------------------
+1819        1 / 2
+1321        2 / 3
+1098        2 / 1
+1097        3 / 2
+978         1 / 0
+899         0 / 1
+864         3 / 4
+263         2 / 4
+201         1 / 3
+195         4 / 5
+168         3 / 5
+79          0 / 2
+71          4 / 3
+52          4 / 6
+22          3 / 1
+16          2 / 5
+16          5 / 6
+10          3 / 6
+9           5 / 7
+8           1 / 4
+4           4 / 7
+2           5 / 4
+
+
+Confusion matrix for ArcDepth
+0     1       2       3       4     5     Col: gold / Row: system
+-----------------------------------------------------------------
+-     899     79      0       0     0     0
+978   -       1819    201     8     0     1
+0     1098    -       1321    263   16    2
+0     22      1097    -       864   168   3
+0     0       0       71      -     195   4
+0     0       0       0       2     -     5
+0     0       0       0       0     0     6
+0     0       0       0       0     0     7
+
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy RelationLength:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+fscore /    RelationLength
+--------------------------
+0.022       -1
+0.922       1
+0.638       2
+0.467       3
+0.09        4
+0.161       5
+0.773       6
+0.374       7
+0.572       8
+0.632       9
+0.41        10
+0.537       11
+0.357       12
+0.583       13
+0.242       14
+0.5         15
+0.545       16
+0.35        17
+0.5         18
+-           19
+0.4         20
+1           21
+1           24
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy ArcDepth:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+fscore /    ArcDepth
+---------------------
+0.022       0
+0.115       1
+0.265       2
+0.371       3
+0.226       4
+0.042       5
+-           6
+-           7
+
+Evaluation arguments: -s output/graph/bert3/gensets/PP_modif_subj_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu --GroupBy Deprel:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/PP_modif_subj_stripped.conllu
+Parsed: output/graph/bert3/gensets/PP_modif_subj_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+fscore /    Deprel
+-----------------------
+-           acl:relcl
+1           aux:pass
+0.611       case
+0.032       ccomp
+1           det
+0.938       iobj
+0.174       mark
+0.393       nmod:beside
+0.409       nmod:in
+0.492       nmod:on
+0.026       nsubj
+-           nsubj:pass
+0.957       obj
+0.978       obl:agent
+0.995       obl:to
+1           punct
+0.022       root
+1           xcomp
+

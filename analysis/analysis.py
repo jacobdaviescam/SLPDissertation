@@ -1,7 +1,7 @@
 import conllu
 from conllu import parse
 
-def subset_generalisation(filename):
+def subset_generalisation(filename, directory):
 
     with open(filename, 'r') as f:
         data = f.read()
@@ -15,12 +15,12 @@ def subset_generalisation(filename):
                 distributions[distribution].append(sentence)
 
     for distribution in distributions:
-        with open(f'{distribution}.conllu', 'w') as f:
+        with open(f'{directory}/{distribution}.conllu', 'w') as f:
             for sentence in distributions[distribution]:
                 f.write(sentence.serialize())
 
 def main():
-    subset_generalisation('output/graph/projective_graph_out.conllu')
+    subset_generalisation('output/transition/bert3/transitionbert3out.conllu', 'output/transition/bert3/gensets')
 
 if __name__ == "__main__":
     main()

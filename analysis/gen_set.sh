@@ -19,13 +19,16 @@ if [ ! -d "$second_directory" ]; then
     exit 1
 fi
 
+outfile="$3"
+metric="$4"
+
 echo "Files in $directory:"
 for file in "$directory"/*; do
     if [ -f "$file" ]; then
         gentype="$(basename "$file")"
         echo "Processing $gentype"
         combined_filename="$second_directory/$gentype"      
-        java -jar MaltEval/dist-20141005/lib/MaltEval.jar  -s "$file" -g "$combined_filename" --GroupBy Sentence:exactmatch --Metric "LA" >> graph_gentypesLA.txt
+        java -jar MaltEval/dist-20141005/lib/MaltEval.jar  -s "$file" -g "$combined_filename" --GroupBy Sentence:exactmatch --Metric "$metric" >> "$outfile"_gensets_"$metric".txt
     fi
 done
 

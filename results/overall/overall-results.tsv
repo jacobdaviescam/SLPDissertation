@@ -1,0 +1,19 @@
+Type                    Graph    Transition
+Bert1                   45.5     60.4
+Bert2                   46.8     63.1 (less training)
+Bert3(less training)    41       60.1
+NoBert1(POS)            47.3     60.8
+NoBert(No POS)          43.8     62.2
+NoBert2(No POS)         43.3     60.4
+
+AverageBert             44.4     61.2
+
+TokenWise:
+
+Type                    Graph    Transition
+Bert1                      
+Bert2                        
+Bert3(less training)           
+NoBert1(POS)                
+NoBert(No POS)               
+NoBert2(No POS)             

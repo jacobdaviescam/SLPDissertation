@@ -1,0 +1,340 @@
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Sentence:exactmatch
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Sentence
+Metric-> LAS
+
+====================================================
+
+exactmatch /    Sentence
+-------------------------
+0.281           Row mean
+1000            Row count
+-------------------------
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy RelationLength:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+precision /    RelationLength
+-----------------------------
+0.724          -1
+-              0
+0.894          1
+0.953          2
+0.7            3
+0.623          4
+0.393          5
+0.904          6
+0.941          7
+0.895          8
+0.92           9
+0.781          10
+0.722          11
+0.941          12
+0.643          13
+0.833          14
+1              15
+-              16
+-              17
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy RelationLength:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+recall /    RelationLength
+--------------------------
+0.724       -1
+0           0
+0.974       1
+0.868       2
+0.81        3
+0.661       4
+0.484       5
+0.889       6
+0.753       7
+0.609       8
+0.565       9
+0.439       10
+0.388       11
+0.457       12
+0.409       13
+0.333       14
+0.167       15
+0           16
+0           17
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    ArcDepth
+------------------------
+-              -1
+0.724          0
+0.793          1
+0.631          2
+0.755          3
+0.637          4
+0.377          5
+0              6
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+recall /    ArcDepth
+---------------------
+0           -1
+0.724       0
+0.729       1
+0.693       2
+0.722       3
+0.804       4
+0.697       5
+-           6
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Deprel:precision --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+precision /    Deprel
+--------------------------
+0.634          acl:relcl
+0.782          aux
+0.983          aux:pass
+0.976          case
+0.298          ccomp
+1              det
+0.727          iobj
+0.779          mark
+0.777          nmod:beside
+0.671          nmod:in
+0.722          nmod:on
+0.633          nsubj
+0.939          nsubj:pass
+0.608          obj
+0.939          obl:agent
+0.668          obl:to
+0.999          punct
+0.724          root
+0.203          xcomp
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Deprel:recall --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+recall /    Deprel
+-----------------------
+0.802       acl:relcl
+0.816       aux
+1           aux:pass
+0.721       case
+0.944       ccomp
+1           det
+0.632       iobj
+1           mark
+0.645       nmod:beside
+0.591       nmod:in
+0.592       nmod:on
+0.605       nsubj
+1           nsubj:pass
+0.829       obj
+0.928       obl:agent
+0.407       obl:to
+1           punct
+0.724       root
+0.8         xcomp
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth --confusion-matrix 1 --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+precision /    recall /    fscore /    ArcDepth
+------------------------------------------------
+-              0           -           -1
+0.724          0.724       0.724       0
+0.793          0.729       0.76        1
+0.631          0.693       0.661       2
+0.755          0.722       0.738       3
+0.637          0.804       0.711       4
+0.377          0.697       0.489       5
+0              -           -           6
+
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+Confusion table for ArcDepth
+frequency   Gold / System
+-------------------------
+724         1 / 2
+529         2 / 1
+423         3 / 2
+276         1 / 0
+237         2 / 3
+192         0 / 1
+166         1 / 3
+141         2 / 4
+106         3 / 1
+68          4 / 3
+64          0 / 2
+53          3 / 4
+19          0 / 3
+19          2 / 5
+19          4 / 5
+17          1 / 4
+7           4 / 2
+7           5 / 4
+2           5 / 6
+1           0 / 4
+1           5 / 2
+1           -1 / 4
+
+
+Confusion matrix for ArcDepth
+-1   0     1     2     3     4     5     Col: gold / Row: system
+----------------------------------------------------------------
+0    -     192   64    19    1     0     0
+0    276   -     724   166   17    0     1
+0    0     529   -     237   141   19    2
+0    0     106   423   -     53    0     3
+0    0     0     7     68    -     19    4
+0    0     0     1     0     7     -     5
+0    0     0     0     0     0     0     6
+
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy RelationLength:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> RelationLength
+Metric-> RelationLength
+
+====================================================
+
+fscore /    RelationLength
+--------------------------
+0.724       -1
+-           0
+0.932       1
+0.908       2
+0.751       3
+0.641       4
+0.434       5
+0.896       6
+0.836       7
+0.725       8
+0.7         9
+0.562       10
+0.505       11
+0.615       12
+0.5         13
+0.476       14
+0.286       15
+-           16
+-           17
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy ArcDepth:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> ArcDepth
+Metric-> ArcDepth
+
+====================================================
+
+fscore /    ArcDepth
+---------------------
+-           -1
+0.724       0
+0.76        1
+0.661       2
+0.738       3
+0.711       4
+0.489       5
+-           6
+
+Evaluation arguments: -s output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu -g UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu --GroupBy Deprel:fscore --Metric self
+====================================================
+Gold:   UD_SLOG/generalisation_sets/stripped/Q_modified_NPs_stripped.conllu
+Parsed: output/graph/bert3/gensets/Q_modified_NPs_stripped.conllu
+====================================================
+GroupBy-> Deprel
+Metric-> Deprel
+
+====================================================
+
+fscore /    Deprel
+-----------------------
+0.708       acl:relcl
+0.799       aux
+0.991       aux:pass
+0.829       case
+0.453       ccomp
+1           det
+0.676       iobj
+0.876       mark
+0.705       nmod:beside
+0.628       nmod:in
+0.651       nmod:on
+0.619       nsubj
+0.968       nsubj:pass
+0.702       obj
+0.933       obl:agent
+0.506       obl:to
+1           punct
+0.724       root
+0.324       xcomp
+

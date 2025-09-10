@@ -2,11 +2,11 @@
 
 parser="$1"
 
-generalisation="$2"
+type="$2"
 
-randinit="$3"
+generalisation="$3"
 
-s=output/parser/"$parser"_generalisation_sets/randinit"$randinit"/"$generalisation"_stripped.conllu
+s=output/"$parser"/"$type"/gensets/"$generalisation"_stripped.conllu
 
 g=UD_SLOG/generalisation_sets/stripped/"$generalisation"_stripped.conllu
 
